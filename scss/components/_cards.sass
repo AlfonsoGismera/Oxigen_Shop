@@ -1,0 +1,88 @@
+/* 3.6. CARDS */
+.cards
+  display: flex
+  justify-content: center
+  width: 80%
+
+.parent
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  width: 100%
+
+.card
+  border: 1px solid #eee
+  margin-top: 10px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+  &__content
+    padding: 20px
+    flex: 1
+
+  &__title
+    font-size: 1.5em
+    margin-bottom: 10px
+
+  &__text
+    font-size: 0.9em
+    color: #666
+    margin-bottom: 15px
+
+  &__line
+    width: auto
+    height: 2px
+    background-color: $primary-color
+    margin-bottom: 20px
+
+  &__image
+    width: 100%
+    height: auto
+    overflow: hidden
+
+  &__img
+    width: 150px
+    height: auto
+    object-fit: cover
+
+.div1
+  grid-column: span 3 / span 3
+  grid-row: span 2 / span 2
+  grid-column-start: 2
+
+.div2
+  grid-column: span 3 / span 3
+  grid-column-start: 2
+  grid-row-start: 3
+
+.div3
+  grid-column: span 2 / span 2
+  grid-column-start: 2
+  grid-row-start: 4
+
+div4
+  grid-column-start: 4
+  grid-row-start: 4
+
+/* Media Query para Mobile */
+@media only screen and (max-width: 768px)
+  .parent
+    grid-template-columns: 1fr
+    grid-template-rows: auto
+
+  .card
+    grid-column: 1 / 2
+    grid-row: auto
+    margin-bottom: 10px
+
+    display: flex
+    flex-direction: column
+
+  .card__image
+    width: auto
+    height: auto
+    object-fit: contain
+
+  .div4
+    .card__image
+      width: auto
+      height: auto
+      object-fit: cover // Mantiene cover para que ocupe todo el espacio

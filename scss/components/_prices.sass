@@ -1,0 +1,19 @@
+/* 5. PRICES */
+.prices
+  padding: 20px
+  text-align: center
+  &__title
+    font-size: 20px
+    margin-bottom: 15px
+  &__list
+    /* Móvil: block */
+  &__item
+    display: inline-block /* Móvil: se verán en línea, o uno debajo del otro con block */
+    width: 150px
+    margin: 10px
+    padding: 10px
+    border: 2px solid #ddd
+    cursor: pointer
+    transition: transform 0.3s
+    &:hover
+      transform: scale(1.05) /* Efecto “mouse over” */

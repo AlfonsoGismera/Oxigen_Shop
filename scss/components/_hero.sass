@@ -1,0 +1,31 @@
+/* 3. HERO */
+.hero
+  text-align: center
+  padding: 20px
+  &__title
+    font-size: 24px
+    margin-bottom: 10px
+  &__subtitle
+    font-size: 16px
+    margin-bottom: 15px
+  &__cta
+    background-color: $primary-color
+    color: #fff
+    border: none
+    padding: 15px 106px
+    font-size: 1.1em
+    cursor: pointer
+    border-radius: 50px 
+    box-shadow: 0 4px 8px rgba($secondary-color, 0.5) // Sombra del mismo color
+    transition: background-color 0.3s 
+
+    &:hover
+      background-color: $secondary-color // Oscurece el color en el hover
+
+  &__image
+    width: 100%
+    margin-top: 20px
+    /* Ajuste para pc */
+    @media only screen and (min-width: 1000px)
+      .hero
+        flex-direction: row

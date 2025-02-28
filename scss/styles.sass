@@ -1,0 +1,370 @@
+/* 1. RESET Y REGLAS BÁSICAS */
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+// Variables
+$primary-color: #08A6E4
+$secondary-color: darken($primary-color, 10%)
+$text-color: #000000
+$font-raleway: 'Raleway', sans-serif
+$font-open-sans: 'Open Sans', sans-serif
+
+body
+  min-width: 320px
+  font-family: $font-raleway
+
+/* 2. HEADER */
+.header
+  background-color: #fff
+  padding: 20px 50px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  position: relative
+
+  &__logo
+    h3
+      color: $primary-color
+      font-family: $font-raleway
+      font-weight: 300
+      font-size: 32px
+      line-height: 37px
+      letter-spacing: 0
+      margin: 0
+
+  &__menu-icon
+    font-size: 1.5em
+    cursor: pointer
+    color: $primary-color
+
+  &__nav
+    .header__menu
+      list-style: none
+      display: none
+      &-item
+        margin-left: 20px
+        a
+          text-decoration: none
+          color: $text-color
+          font-family: $font-open-sans
+          font-weight: 700
+          font-size: 11px
+          line-height: 15px
+          letter-spacing: 3.28px
+          text-align: center
+          text-transform: uppercase
+
+// Media Query para Mobile
+@media only screen and (max-width: 768px)
+  .header
+    padding: 10px
+
+    &__menu-icon
+      display: block
+      position: absolute
+      top: 10px
+      right: 10px
+
+    &__nav
+      width: 100%
+      &.active
+        display: block
+
+      .header__menu
+        display: block
+        &-item
+          margin-left: 0
+          margin-bottom: 10px
+          width: 100%
+          a
+            display: block
+            padding: 10px
+            text-align: left
+            border-bottom: 1px solid #eee
+
+// Media Query para Desktop
+@media only screen and (min-width: 1000px)
+  .header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 50px
+
+    &__nav
+      .header__menu
+        display: flex
+        &-item
+          margin-right: 20px
+
+/* 3. HERO */
+.hero
+  text-align: center
+  padding: 20px
+  &__title
+    font-size: 24px
+    margin-bottom: 10px
+  &__subtitle
+    font-size: 16px
+    margin-bottom: 15px
+  &__cta
+    background-color: $primary-color
+    color: #fff
+    border: none
+    padding: 15px 106px
+    font-size: 1.1em
+    cursor: pointer
+    border-radius: 50px 
+    box-shadow: 0 4px 8px rgba($secondary-color, 0.5) // Sombra del mismo color
+    transition: background-color 0.3s 
+
+    &:hover
+      background-color: $secondary-color // Oscurece el color en el hover
+
+  &__image
+    width: 100%
+    margin-top: 20px
+    /* Ajuste para móvil */
+
+/* 3.5. SALES */
+.sales
+  text-align: center
+
+  &__title
+    font-size: 36px
+    margin: 20px
+    font-weight: 400
+    line-height: 42px
+    letter-spacing: 0%
+
+
+  &__items
+    display: flex
+    justify-content: center
+
+  &__item
+    text-align: center
+    margin: 0 10px
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__icon
+    width: 150px
+    height: 150px
+    vertical-align: middle
+    margin-bottom: 10px 
+    margin-top: 60px
+
+
+  &__number
+    font-size: 1.2em
+    margin-bottom: 5px // Espacio entre el número y el texto
+
+  &__text
+    font-size: 0.9em
+    color: #888
+    margin-bottom: 20px // Espacio entre el texto y el final del item
+
+// Media Query para Mobile
+@media only screen and (max-width: 768px)
+  .sales
+    &__items
+      display: block
+    &__item
+      margin: 20px auto
+
+/* 3.6. CARDS */
+.cards
+  display: flex
+  justify-content: center
+  width: 80%
+  
+
+.parent
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  width: 100%
+
+.card
+  border: 1px solid #eee
+  margin-top: 10px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+  &__content
+    padding: 20px
+    flex: 1
+
+  &__title
+    font-size: 1.5em
+    margin-bottom: 10px
+
+  &__text
+    font-size: 0.9em
+    color: #666
+    margin-bottom: 15px
+
+  &__line
+    width: auto
+    height: 2px
+    background-color: $primary-color
+    margin-bottom: 20px
+
+  &__image
+    width: 100%
+    height: auto
+    overflow: hidden
+
+  &__img
+    width: 150px
+    height: auto
+    object-fit: cover
+
+.div1
+  grid-column: span 3 / span 3
+  grid-row: span 2 / span 2
+  grid-column-start: 2
+
+.div2
+  grid-column: span 3 / span 3
+  grid-column-start: 2
+  grid-row-start: 3
+
+.div3
+  grid-column: span 2 / span 2
+  grid-column-start: 2
+  grid-row-start: 4
+
+div4
+  grid-column-start: 4
+  grid-row-start: 4
+  
+  
+
+/* Media Query para Mobile */
+@media only screen and (max-width: 768px)
+  .parent
+    grid-template-columns: 1fr
+    grid-template-rows: auto
+
+  .card
+    grid-column: 1 / 2
+    grid-row: auto
+    margin-bottom: 10px
+
+    display: flex
+    flex-direction: column
+    
+
+
+  .card__image
+    width: auto
+    height: auto 
+    object-fit: contain 
+
+  .div4
+    .card__image
+      width: auto  
+      height: auto 
+      object-fit: cover // Mantiene cover para que ocupe todo el espacio
+  
+/* 4. FEATURES */
+.features
+  padding: 20px
+  &__title
+    font-size: 20px
+    margin-bottom: 15px
+
+/* 5. PRICES */
+.prices
+  padding: 20px
+  text-align: center
+  &__title
+    font-size: 20px
+    margin-bottom: 15px
+  &__list
+    /* Móvil: block */
+  &__item
+    display: inline-block /* Móvil: se verán en línea, o uno debajo del otro con block */
+    width: 150px
+    margin: 10px
+    padding: 10px
+    border: 2px solid #ddd
+    cursor: pointer
+    transition: transform 0.3s
+    &:hover
+      transform: scale(1.05) /* Efecto “mouse over” */
+
+// 6. FOOTER
+.footer
+  background-color: #f5f5f5
+  padding: 20px 50px
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1)
+  font-family: $font-raleway
+
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__left
+    display: flex
+    flex-direction: column
+
+  &__logo
+    color: $primary-color
+    font-size: 32px
+    font-weight: 300
+    margin-bottom: 5px
+
+  &__copyright
+    font-size: 12px
+    color: #555
+
+  &__right
+    display: flex
+    align-items: center
+
+  &__social-icon
+    margin-left: 10px
+    color: $primary-color
+    font-size: 1.5em
+    display: inline-block
+
+  &__social-image
+    width: 24px 
+    height: 24px 
+    background-size: contain 
+    background-repeat: no-repeat 
+
+// Media Query para Mobile
+@media only screen and (max-width: 768px)
+  .footer
+    padding: 10px
+
+    &__content
+      flex-direction: column
+      align-items: center
+
+    &__left
+      align-items: center
+      margin-bottom: 10px
+
+    &__social-icon
+      margin: 5px
+
+/* 7. MEDIA QUERY PARA DESKTOP (min-width: 1000px) */
+@media only screen and (min-width: 1000px)
+  .header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 50px
+    &__logo
+      display: block /* Flex ya maneja la alineación */
+    &__nav
+      .header__menu
+        &-item
+          margin-right: 20px
+  .hero
+    flex-direction
