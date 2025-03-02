@@ -1,3 +1,7 @@
+// Base de la pagina
+@use '../base/variables' as *
+@use '../base/reset' as *
+
 /* 5. PRICES */
 .prices
   text-align: center
@@ -7,7 +11,6 @@
   font-weight: 400
   font-size: 36px
   line-height: 42px
-  letter-spacing: 0%
   margin: 1em
 
 .prices__list
@@ -29,19 +32,19 @@
   transition: box-shadow 0.3s ease
 
 .basic
-  border: 2px solid #FB3B64
+  border: 1px solid $red
   &:hover
-    box-shadow: 5px 10px 27px 0px #FB3B64
+    box-shadow: 5px 10px 27px 0px $red
 
 .professional
-  border: 2px solid #07ACE6
+  border: 1px solid $primary-color
   &:hover
-    box-shadow: 5px 10px 27px 0px #07ACE64A
+    box-shadow: 5px 10px 27px 0px $primary-color
 
 .premium
-  border: 2px solid #55DFB4
+  border: 1px solid $green
   &:hover
-    box-shadow: 5px 10px 27px 0px #55DFB4
+    box-shadow: 5px 10px 27px 0px $green
 
 .prices__item-title
   margin-bottom: 10px
@@ -58,13 +61,13 @@
   letter-spacing: 0%
 
 .basic .prices__item-price
-  color: #FB3B64
+  color: $red
 
 .professional .prices__item-price
-  color: #07ACE6
+  color: $primary-color
 
 .premium .prices__item-price
-  color: #55DFB4
+  color: $green
 
 .prices__features
   list-style: none
@@ -83,10 +86,10 @@
   line-height: 19.07px
 
 .check
-  color: #55DFB4
+  color: $green
 
 .cross
-  color: #FB3B64
+  color: $red
 
 .prices__button
   position: absolute
@@ -102,15 +105,15 @@
   cursor: pointer
 
 .basic .prices__button
-  background: #FB3B64
+  background: $red
   color: white
 
 .professional .prices__button
-  background: #07ACE6
+  background: $primary-color
   color: white
 
 .premium .prices__button
-  background: #55DFB4
+  background: $green
   color: white
 
 @media (max-width: 768px)

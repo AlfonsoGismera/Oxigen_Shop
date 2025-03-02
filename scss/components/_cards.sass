@@ -1,88 +1,196 @@
+// Base de la pagina
+@use '../base/variables' as *
+@use '../base/reset' as *
+
 /* 3.6. CARDS */
-.cards
+.cards-section
+  width: 90%
+  margin: 0 auto
+  padding: 20px 0
+
+  // Estilos generales para cada card
+  .card
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 2em
+    border-radius: 8px
+    padding: 1em
+    background-color: #FFFFFF
+
+    .text-content
+      position: relative
+      z-index: 1
+
+      h2
+        font-weight: 400
+        font-size: 36px
+        line-height: 42px
+
+      p
+        font-family: $font-open-sans
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        white-space: pre-line
+        margin: 1em
+
+    .image-content
+      position: relative // Asegura que la imagen tenga z-index
+      z-index: 1 // Asegura que la imagen esté encima de los pseudo-elementos
+      img
+        max-width: 100%
+        height: auto
+        display: block
+
+  // Card 1: Texto a la izquierda, imagen a la derecha
+  .card-1
+    .text-content
+      p
+        position: relative
+        padding-bottom: 10px
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          bottom: 0
+          height: 4px
+          width: 100%
+          background-color: $red
+
+    .image-content
+      text-align: right
+      &::before // Rectángulo rojo
+        content: ""
+        position: absolute
+        top: 30px
+        right: 10px
+        width: 150px
+        height: 150px
+        border-radius: 25px
+        background-color: $red
+        z-index: -1 // Coloca el rectángulo detrás de la imagen
+        transform: rotate(15deg)
+
+  // Card 2: Imagen a la izquierda, texto a la derecha
+  .card-2
+    .text-content
+      p
+        position: relative
+        padding-bottom: 10px
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          bottom: 0
+          height: 4px
+          width: 100%
+          background-color: $primary-color
+
+    .image-content
+      &::after // Círculo
+        content: ""
+        position: absolute
+        top: 45%
+        left: 45%
+        transform: translate(-50%, -50%)
+        width: 70%
+        height: 70%
+        background-color: $primary-color
+        border-radius: 50%
+        z-index: -1 // Coloca el círculo detrás de la imagen
+  @media (max-width: 768px)
+    flex-direction: column-reverse // Invierte el orden de los elementos
+    align-items: center 
+    
+
+    .text-content
+      order: 2 // Coloca el texto después de la imagen
+      width: 100% // Asegura que el texto ocupe todo el ancho
+      text-align: center // Centra el texto
+
+    .image-content
+      order: 1 // Coloca la imagen primero
+      width: 100% 
+      text-align: center 
+    .card-2
+  position: relative // Establece el contexto de posicionamiento para los elementos
+
+  .image-content
+    position: relative 
+    z-index: 1 // Asegura que la imagen esté encima de los pelementos
+
+  // Fila que contiene Card 3 y Card 4
+  .cards-row
+    display: flex
+    gap: 20px
+
+    // Card 3: Solo texto con línea
+    .card-3
+      margin-right: 2em
+      .text-content
+        p
+          position: relative
+          padding-bottom: 10px
+          &::after
+            content: ""
+            position: absolute
+            left: 0
+            bottom: 0
+            height: 4px
+            width: 100%
+            background-color: $green
+    // Estilos para que ambas cards (3 y 4) se muestren en fila
+    .card-3, .card-4
+      flex: 1
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+    // Card 4: La imagen se ajusta para rellenar todo el contenedor
+.card-4
+  padding: 0
   display: flex
-  justify-content: center
-  width: 80%
+  justify-content: space-between
+  align-items: center
 
-.parent
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  width: 100%
-
-.card
-  border: 1px solid #eee
-  margin-top: 10px
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-
-  &__content
-    padding: 20px
+  .text-content
     flex: 1
 
-  &__title
-    font-size: 1.5em
-    margin-bottom: 10px
+  .image-content
+    flex: 1
+    text-align: right
+    min-height: 200px
+    background-image: url('https://images.unsplash.com/photo-1542049016673-8e5a8f9690d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
 
-  &__text
-    font-size: 0.9em
-    color: #666
-    margin-bottom: 15px
+/*************************************************************
+ * Responsividad para tablets/móviles
+ *************************************************************/
+@media (max-width: 768px)
+  .cards-section
+    .card
+      padding: auto
+      flex-direction: column
+      text-align: center
+    .image-content  
+      text-align: center
+    .cards-row
+      flex-direction: column
 
-  &__line
-    width: auto
-    height: 2px
-    background-color: $primary-color
-    margin-bottom: 20px
-
-  &__image
-    width: 100%
-    height: auto
-    overflow: hidden
-
-  &__img
-    width: 150px
-    height: auto
-    object-fit: cover
-
-.div1
-  grid-column: span 3 / span 3
-  grid-row: span 2 / span 2
-  grid-column-start: 2
-
-.div2
-  grid-column: span 3 / span 3
-  grid-column-start: 2
-  grid-row-start: 3
-
-.div3
-  grid-column: span 2 / span 2
-  grid-column-start: 2
-  grid-row-start: 4
-
-div4
-  grid-column-start: 4
-  grid-row-start: 4
-
-/* Media Query para Mobile */
-@media only screen and (max-width: 768px)
-  .parent
-    grid-template-columns: 1fr
-    grid-template-rows: auto
-
-  .card
-    grid-column: 1 / 2
-    grid-row: auto
-    margin-bottom: 10px
-
-    display: flex
-    flex-direction: column
-
-  .card__image
-    width: auto
-    height: auto
-    object-fit: contain
-
-  .div4
-    .card__image
-      width: auto
-      height: auto
-      object-fit: cover // Mantiene cover para que ocupe todo el espacio
+      .card-3,
+      .card-4
+        margin-bottom: 30px
+        flex-direction: column
+    .card-4 .image-content // Selector específico para la imagen en card-4
+      text-align: center
+    .card-1 .image-content // Selector específico para la imagen en card-1
+      text-align: center
+    .card-2 .image-content // Selector específico para la imagen en card-2
+      text-align: center
+    .card-1 .text-content p::after, // Oculta la línea en card-1
+    .card-2 .text-content p::after, // Oculta la línea en card-2
+    .card-3 .text-content p::after // Oculta la línea en card-3
+      display: none
