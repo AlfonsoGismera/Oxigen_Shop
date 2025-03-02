@@ -1,19 +1,119 @@
 /* 5. PRICES */
 .prices
-  padding: 20px
   text-align: center
-  &__title
-    font-size: 20px
-    margin-bottom: 15px
-  &__list
-    /* Móvil: block */
-  &__item
-    display: inline-block /* Móvil: se verán en línea, o uno debajo del otro con block */
-    width: 150px
-    margin: 10px
-    padding: 10px
-    border: 2px solid #ddd
-    cursor: pointer
-    transition: transform 0.3s
-    &:hover
-      transform: scale(1.05) /* Efecto “mouse over” */
+  padding: 40px 20px
+
+.prices__title
+  font-weight: 400
+  font-size: 36px
+  line-height: 42px
+  letter-spacing: 0%
+  margin: 1em
+
+.prices__list
+  display: flex
+  justify-content: center
+  gap: 20px
+  flex-wrap: wrap
+
+.prices__item
+  position: relative
+  padding-bottom: 60px // Espacio extra para el botón
+  background: white
+  padding: 20px
+  margin-right: 50px// si se ve mal quitar o cambiar
+  border-radius: 10px 
+  width: 300px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  text-align: center
+  transition: box-shadow 0.3s ease
+
+.basic
+  border: 2px solid #FB3B64
+  &:hover
+    box-shadow: 5px 10px 27px 0px #FB3B64
+
+.professional
+  border: 2px solid #07ACE6
+  &:hover
+    box-shadow: 5px 10px 27px 0px #07ACE64A
+
+.premium
+  border: 2px solid #55DFB4
+  &:hover
+    box-shadow: 5px 10px 27px 0px #55DFB4
+
+.prices__item-title
+  margin-bottom: 10px
+  font-weight: 700
+  font-size: 21px
+  line-height: 24.65px
+  letter-spacing: 0%
+
+.prices__item-price
+  font-family: $font-open-sans
+  font-weight: 300
+  font-size: 46px
+  line-height: 64px
+  letter-spacing: 0%
+
+.basic .prices__item-price
+  color: #FB3B64
+
+.professional .prices__item-price
+  color: #07ACE6
+
+.premium .prices__item-price
+  color: #55DFB4
+
+.prices__features
+  list-style: none
+  padding: 0
+  margin: 20px 0
+
+.prices__features li
+  font-size: 16px
+  display: flex
+  align-items: center
+  gap: 10px
+  margin: 2em
+  justify-content: center
+  font-weight: 400
+  font-size: 14px
+  line-height: 19.07px
+
+.check
+  color: #55DFB4
+
+.cross
+  color: #FB3B64
+
+.prices__button
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%) translateY(50%) // Lo hace sobresalir
+  display: inline-block
+  padding: 15px 50px
+  border-radius: 33px
+  font-family: $font-open-sans
+  border: 1px solid
+  font-size: 18px
+  cursor: pointer
+
+.basic .prices__button
+  background: #FB3B64
+  color: white
+
+.professional .prices__button
+  background: #07ACE6
+  color: white
+
+.premium .prices__button
+  background: #55DFB4
+  color: white
+
+@media (max-width: 768px)
+  .prices__list
+    flex-direction: column
+    align-items: center

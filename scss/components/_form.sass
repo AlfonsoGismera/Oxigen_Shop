@@ -1,154 +1,167 @@
 /* Form Section                              */
-.form-section 
+.form-section
   display: block
   padding: 20px 10px
   background-color: #f9f9f9
 
-
 /* Form Container - Mobile First             */
 
-.form-container 
+.form-container
   background-color: #fff
   padding: 30px
   border-radius: 8px
   font-family: $font-open-sans
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-  width: 100%
+  width: 80%
   margin: 0 auto
-
+  font-size: 16px
+  line-height: 22px
 
 /* Form Left - Información de contacto       */
-.form-left 
-  padding-left: 30px  // Alineación consistente
+.form-left
+  padding-left: 30px // Alineación consistente
 
-  h1 
+  h1
     margin-bottom: 10px
-    font-family: $font-raleway  // Solo el h1 usa Raleway
+    font-family: $font-raleway // Solo el h1 usa Raleway
     font-weight: 400
-    font-size: 49px
+    font-size: 39px
     line-height: 57.53px
 
-  p 
-    color: #666
-    margin-bottom: 45px
+  p
+    margin-bottom: 5em
 
-  .contact-info 
+  .contact-info
     display: flex
-    flex-wrap: wrap  // Permite que se envuelvan si es necesario
+    flex-wrap: wrap // Permite que se envuelvan si es necesario
     justify-content: flex-start
-    gap: 20px    
+    color: #A5A5A5
+    gap: 20px
     margin-top: 20px
 
-    p 
+    p
       display: flex
       align-items: center
-      color: $text-color
       margin-bottom: 0
-      margin-right: 20px  // Separación entre datos
-      img 
+      margin-right: 20px // Separación entre datos
+      img
         margin-right: 10px
         width: 20px
         height: 20px
 
 /* Contact Form                              */
 
-.contact-form 
+.contact-form
   width: 100%
   // Agregamos padding-left para alinear con .form-left
   padding-left: 30px
 
-  .form-group 
+  .form-group
     margin-bottom: 20px
 
-  label 
+  label
     display: block
-    font-weight: bold
-    margin-bottom: 5px
+    font-weight: 600
+    font-size: 11px
+    line-height: 14.98px
+    letter-spacing: 3.28px
+
+    margin-bottom: 1em
+    margin-top: 1em
 
   input[type="text"],
-  input[type="email"] 
+  input[type="email"]
     width: 100%
     padding: 10px
     border: none
     border-bottom: 1px solid #ddd
 
-  .consent 
+  .consent
     display: flex
     align-items: center
+    color: #707070
     margin-bottom: 20px
+    font-weight: 400
+    font-size: 12px
+    line-height: 16.34px
 
-  input[type="checkbox"] 
-    margin-right: 10px
+  input[type="checkbox"]
+    margin-right: 1em
+    width: 24px
+    height: 24px
+    top: 195px
+    left: 456px
 
-  .cta 
-    background-color: $primary-color
-    color: #fff
-    border: none
-    padding: 15px 106px
-    font-size: 1.1em
-    cursor: pointer
-    border-radius: 50px
-    box-shadow: 0 4px 8px rgba($secondary-color, 0.5)
-    transition: background-color 0.3s
-    margin-top: 20px
-    width: 100%
-    &:hover 
-      background-color: $secondary-color
+.cta
+  display: block
+  margin-left: auto
+  background-color: $primary-color
+  color: #fff
+  border: none
+  padding: 15px 106px
+  font-size: 1.1em
+  cursor: pointer
+  border-radius: 50px
+  box-shadow: 0 4px 8px rgba($secondary-color, 0.5)
+  transition: background-color 0.3s
+  margin-top: 20px
+
+  &:hover
+    background-color: $secondary-color
 
 /* Contenedor del resultado y botón de guardar*/
 
-.save-container 
+.save-container
   display: flex
   justify-content: space-between
   align-items: center
   width: 100%
 
-#result 
+#result
   font-size: 18px
   color: white
   text-align: right
   padding-right: 15px
   flex-grow: 1
 
-
 /* Desktop: Versión para ordenadores         */
 
 @media only screen and (min-width: 1000px)
-  .form-container 
+  .form-container
     display: flex
     justify-content: space-between
 
-  .form-left 
+  .form-left
     width: 40%
     padding-left: 30px
 
-  .contact-form 
+  .contact-form
     width: 55%
     padding-left: 30px
 
 /* Media Queries para Responsive Design      */
 
 @media (max-width: 768px)
-  .form-container 
+  .form-container
     padding: 15px
 
   // En móviles, se apilan los elementos del formulario en bloque
-  .conversion-box 
+  .conversion-box
     flex-direction: column
     align-items: flex-start
 
   .unit-container,
-  .input-group 
+  .input-group
     flex-direction: column
     align-items: flex-start
     width: 100%
 
 @media (max-width: 480px)
-  header 
+  header
     font-size: 18px
-  .form-container 
+  .form-container
     padding: 15px
-  footer 
+  footer
     padding: 15px 0
-  .footer-content a 
+  .footer-content a
     font-size: 12px

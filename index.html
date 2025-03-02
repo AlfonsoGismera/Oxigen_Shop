@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OXYGEN Shop</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
@@ -34,37 +36,37 @@
     </nav>
   </header>
   <main>
-  <!-- Main botones de de tienda -->
-  <section class="hero" id="home">
-    <h1 class="hero__title">Sell More!</h1>
-    <p class="hero__subtitle">The most popular sales platform in the country</p>
-    <button class="hero__cta">Open your shop</button>
-    <!-- Imagen principal (versión móvil) -->
-    <img class="hero__image" src="./img/fondo.png" alt="Laptop top view" />
-  </section>
-  <!-- Sales -->
-  <section class="sales" id="sales">
-    <h2 class="sales__title">The most popular sales platform in the country</h2>
-    <div class="sales__items">
-      <div class="sales__item">
-        <img src="./img/Colum_Rojo_1.png" alt="100000+ daily entries" class="sales__icon">
-        <p class="sales__number">100000+</p>
-        <p class="sales__text">daily entries</p>
+    <!-- Main botones de de tienda -->
+    <section class="hero" id="home">
+      <h1 class="hero__title">Sell More!</h1>
+      <p class="hero__subtitle">The most popular sales platform in the country</p>
+      <button class="hero__cta">Open your shop</button>
+      <!-- Imagen principal (versión móvil) -->
+      <img class="hero__image" src="./img/fondo.png" alt="Laptop top view" />
+    </section>
+    <!-- Sales -->
+    <section class="sales" id="sales">
+      <h2 class="sales__title">The most popular sales platform in the country</h2>
+      <div class="sales__items">
+        <div class="sales__item">
+          <img src="./img/Colum_Rojo_1.png" alt="100000+ daily entries" class="sales__icon">
+          <p class="sales__number">100000+</p>
+          <p class="sales__text">daily entries</p>
+        </div>
+        <div class="sales__item">
+          <img src="./img/Colum_Azul_2.png" alt="2000000+ seen products every day" class="sales__icon">
+          <p class="sales__number">2000000+</p>
+          <p class="sales__text">seen products every day</p>
+        </div>
+        <div class="sales__item">
+          <img src="./img/Colum_Verde_3.png" alt="10000+ added posts daily" class="sales__icon">
+          <p class="sales__number">10000+</p>
+          <p class="sales__text">added posts daily</p>
+        </div>
       </div>
-      <div class="sales__item">
-        <img src="./img/Colum_Azul_2.png" alt="2000000+ seen products every day" class="sales__icon">
-        <p class="sales__number">2000000+</p>
-        <p class="sales__text">seen products every day</p>
-      </div>
-      <div class="sales__item">
-        <img src="./img/Colum_Verde_3.png" alt="10000+ added posts daily" class="sales__icon">
-        <p class="sales__number">10000+</p>
-        <p class="sales__text">added posts daily</p>
-      </div>
-    </div>
-  </section>
-  <!-- Cards -->
-<!-- 
+    </section>
+    <!-- Cards -->
+    <!-- 
   <section class="cards">
     <div class="parent">
       <div class="card card--1 div1">
@@ -105,62 +107,90 @@
     </div>
   </section> -->
 
-  <!-- Precios -->
+    <!-- Precios -->
+   <!-- Pricing Section -->
+<section class="prices" id="prices">
+  <h2 class="prices__title">Pricing</h2>
+  <div class="prices__list">
+    <!-- Basic Plan -->
+    <div class="prices__item basic">
+      <h3 class="prices__item-title">Basic</h3>
+      <p class="prices__item-price">$9/mo</p>
+      <ul class="prices__features">
+        <li><span class="check">✔</span> 100 MB HDD</li>
+        <li><span class="check">✔</span> 1 Subdomain</li>
+        <li><span class="check">✔</span> 2 Emails</li>
+        <li><span class="cross">✖</span> Free SSL</li>
+        <li><span class="cross">✖</span> Full Support</li>
+      </ul>
+      <button class="prices__button">Begin</button>
+    </div>
+    <!-- Professional Plan -->
+    <div class="prices__item professional">
+      <h3 class="prices__item-title">Professional</h3>
+      <p class="prices__item-price">$25/mo</p>
+      <ul class="prices__features">
+        <li><span class="check">✔</span> 500 MB HDD</li>
+        <li><span class="check">✔</span> 2 Subdomains</li>
+        <li><span class="check">✔</span> 5 Emails</li>
+        <li><span class="check">✔</span> Free SSL</li>
+        <li><span class="cross">✖</span> Full Support</li>
+      </ul>
+      <button class="prices__button">Begin</button>
+    </div>
+    <!-- Premium Plan -->
+    <div class="prices__item premium">
+      <h3 class="prices__item-title">Premium</h3>
+      <p class="prices__item-price">$60/mo</p>
+      <ul class="prices__features">
+        <li><span class="check">✔</span> 2 GB HDD</li>
+        <li><span class="check">✔</span> 5 Subdomains</li>
+        <li><span class="check">✔</span> 10 Emails</li>
+        <li><span class="check">✔</span> Free SSL</li>
+        <li><span class="check">✔</span> Full Support</li>
+      </ul>
+      <button class="prices__button">Begin</button>
+    </div>
+  </div>
+</section>
 
-  <section class="prices" id="prices">
-    <h2 class="prices__title">Our Plans</h2>
-    <div class="prices__list">
-      <div class="prices__item">
-        <h3 class="prices__item-title">Basic</h3>
-        <p class="prices__item-price">$9/mo</p>
-      </div>
-      <div class="prices__item">
-        <h3 class="prices__item-title">Standard</h3>
-        <p class="prices__item-price">$19/mo</p>
-      </div>
-      <div class="prices__item">
-        <h3 class="prices__item-title">Premium</h3>
-        <p class="prices__item-price">$29/mo</p>
-      </div>
-    </div>
-  </section>
-  <!-- Form -->
-  <section class="form-section">
-    <div class="form-container">
-      <div class="form-left">
-        <h1>Any questions?</h1>
-        <p>Leave your email address or call us!</p>
-        <div class="contact-info">
-          <p>
-            <img src="./img/Mail.png" alt="Email" />
-            info@bestshop.xyz
-          </p>
-          <p>
-            <img src="./img/Phone_1.png" alt="Phone" />
-            123 456 789
-          </p>
+    <!-- Form -->
+    <section class="form-section">
+      <div class="form-container">
+        <div class="form-left">
+          <h1>Any questions?</h1>
+          <p>Leave your email address or call us!</p>
+          <div class="contact-info">
+            <p>
+              <img src="./img/Mail.png" alt="Email" />
+              info@bestshop.xyz
+            </p>
+            <p>
+              <img src="./img/Phone_1.png" alt="Phone" />
+              123 456 789
+            </p>
+          </div>
         </div>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-group consent">
+            <input type="checkbox" id="consent" name="consent" />
+            <label for="consent">
+              I hereby give consent for my personal data...
+            </label>
+          </div>
+          <button type="submit" class="cta">Send</button>
+        </form>
       </div>
-      <form class="contact-form" action="#" method="post">
-        <div class="form-group">
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name" />
-        </div>
-        <div class="form-group">
-          <label for="email">EMAIL</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div class="form-group consent">
-          <input type="checkbox" id="consent" name="consent" />
-          <label for="consent">
-            I hereby give consent for my personal data...
-          </label>
-        </div>
-        <button type="submit" class="cta">Send</button>
-      </form>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
