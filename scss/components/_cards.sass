@@ -101,33 +101,32 @@
         z-index: -1 // Coloca el círculo detrás de la imagen
   @media (max-width: 768px)
     flex-direction: column-reverse // Invierte el orden de los elementos
-    align-items: center 
-    
+    align-items: center
 
     .text-content
       order: 2 // Coloca el texto después de la imagen
-      width: 100% // Asegura que el texto ocupe todo el ancho
-      text-align: center // Centra el texto
+      width: 100%
+      text-align: center
 
     .image-content
       order: 1 // Coloca la imagen primero
-      width: 100% 
-      text-align: center 
+      width: 100%
+      text-align: center
     .card-2
-  position: relative // Establece el contexto de posicionamiento para los elementos
+      position: relative
 
   .image-content
-    position: relative 
-    z-index: 1 // Asegura que la imagen esté encima de los pelementos
+    position: relative
+    z-index: 1
 
   // Fila que contiene Card 3 y Card 4
   .cards-row
     display: flex
     gap: 20px
+    justify-content: flex-start // Cambio space-between a flex-start (en pruebas)
 
     // Card 3: Solo texto con línea
     .card-3
-      margin-right: 2em
       .text-content
         p
           position: relative
@@ -140,57 +139,54 @@
             height: 4px
             width: 100%
             background-color: $green
-    // Estilos para que ambas cards (3 y 4) se muestren en fila
+    // Estilos para que ambas cards (3 y 4) se muestren en una fila
     .card-3, .card-4
       flex: 1
       display: flex
       align-items: center
       justify-content: space-between
 
-    // Card 4: La imagen se ajusta para rellenar todo el contenedor
-.card-4
-  padding: 0
-  display: flex
-  justify-content: space-between
-  align-items: center
+    // Card 4: La imagen se ajusta para rellenar todo el contenedor (No conseguido)
+    .card-4
+      padding: 0 // Elimina el padding solo para card-4 da problemas
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-shrink: 0 // Evita que la card-4 se encoja (supuestamene)
 
-  .text-content
-    flex: 1
+      .text-content
+        flex: 1
+      .image-content
+        flex: 1
+        text-align: right
+        flex-shrink: 0
+        img
+          object-fit: cover
 
-  .image-content
-    flex: 1
-    text-align: right
-    min-height: 200px
-    background-image: url('https://images.unsplash.com/photo-1542049016673-8e5a8f9690d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
+//  Responsividad para tablets/móviles
 
-/*************************************************************
- * Responsividad para tablets/móviles
- *************************************************************/
-@media (max-width: 768px)
-  .cards-section
-    .card
-      padding: auto
-      flex-direction: column
-      text-align: center
-    .image-content  
-      text-align: center
-    .cards-row
-      flex-direction: column
+      @media (max-width: 768px)
+        .cards-section
+          .card
+            padding: auto
+            flex-direction: column
+            text-align: center
+          .image-content
+            text-align: center
+          .cards-row
+            flex-direction: column
 
-      .card-3,
-      .card-4
-        margin-bottom: 30px
-        flex-direction: column
-    .card-4 .image-content // Selector específico para la imagen en card-4
-      text-align: center
-    .card-1 .image-content // Selector específico para la imagen en card-1
-      text-align: center
-    .card-2 .image-content // Selector específico para la imagen en card-2
-      text-align: center
-    .card-1 .text-content p::after, // Oculta la línea en card-1
-    .card-2 .text-content p::after, // Oculta la línea en card-2
-    .card-3 .text-content p::after // Oculta la línea en card-3
-      display: none
+            .card-3,
+            .card-4
+              margin-bottom: 30px
+              flex-direction: column
+          .card-4 .image-content
+            text-align: center
+          .card-1 .image-content // Selector específico para la imagen en card-1
+            text-align: center
+          .card-2 .image-content
+            text-align: center
+          .card-1 .text-content p::after, // Oculta la línea en card-1
+          .card-2 .text-content p::after,
+          .card-3 .text-content p::after
+            display: none

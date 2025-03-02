@@ -1,4 +1,3 @@
-// Base de la pagina
 @use '../base/variables' as *
 @use '../base/reset' as *
 
@@ -7,7 +6,7 @@
   text-align: center
 
   &__title
-    font-size: 36px
+    font-size: 46px
     margin: 20px
     font-weight: 400
     line-height: 42px
@@ -16,35 +15,70 @@
   &__items
     display: flex
     justify-content: center
+    gap: 30px
 
   &__item
-    text-align: center
-    margin: 0 10px
-    flex: 1
     display: flex
     flex-direction: column
     align-items: center
+    flex: 1
+    margin: 0 10px
+
+  /* Contenedor para el ícono y el círculo dibujado */
+  &__icon-wrapper
+    position: relative
+    display: inline-block
+    margin-top: 60px
+    margin-bottom: 10px
+
+    .sales__circle
+      position: absolute
+      z-index: 0
+      width: 45px
+      height: 45px
+      border-radius: 50%
+      left: -15px
+      top: 0px
+
+    .sales__circle--rojo
+      background-color: #ff6b6b
+
+    .sales__circle--azul
+      background-color: #48dbfb
+
+    .sales__circle--verde
+      background-color: #1dd1a1
 
   &__icon
-    width: 150px
-    height: 150px
-    vertical-align: middle
-    margin-bottom: 10px 
-    margin-top: 60px
+    position: relative
+    z-index: 1
+
+  &__description
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+    margin-bottom: 20px
 
   &__number
     font-size: 1.2em
-    margin-bottom: 5px // Espacio entre el número y el texto
+    margin-top: 0.5em
+    font-weight: 600
+
+  &__bullet
+    font-size: 1.2em
+    color: #000
 
   &__text
-    font-size: 0.9em
+    margin-top: 1em
+    font-size: 16px
     color: #888
-    margin-bottom: 20px // Espacio entre el texto y el final del item
 
-// Media Query para Mobile
+// Media Query para móvil
 @media only screen and (max-width: 768px)
   .sales
     &__items
       display: block
+
     &__item
       margin: 20px auto
