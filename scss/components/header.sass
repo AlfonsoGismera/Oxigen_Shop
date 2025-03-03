@@ -18,6 +18,14 @@
       line-height: 37px
       letter-spacing: 0
       margin: 0
+  &__menu-button
+    display: none // Hide on desktop
+    position: absolute
+    top: 15px
+    right: 15px
+    background: none
+    border: none // Remove border
+    cursor: pointer
 
   &__menu-icon
     font-size: 1.5em
@@ -32,7 +40,7 @@
         margin-left: 20px
         a
           text-decoration: none
-          color: $text-color
+          color: rgba(165, 165, 165, 1)
           font-family: $font-open-sans
           font-weight: 700
           font-size: 11px
@@ -41,10 +49,19 @@
           text-align: center
           text-transform: uppercase
 
+          &:hover  // Estilo para el hover
+            color: $text-color
+
+.header__menu-imagen
+  width: 30px
+  height: 20px
+
 // Media Query para Mobile
 @media only screen and (max-width: 768px)
   .header
     padding: 10px
+    &__menu-button
+      display: block
 
     &__menu-icon
       display: block
@@ -53,12 +70,13 @@
       right: 10px
 
     &__nav
-      width: 100%
+      display: none // Escondemos en móvil
+      flex-direction: column
       &.active
-        display: block
+        display: flex
 
       .header__menu
-        display: block
+        display: flex
         &-item
           margin-left: 0
           margin-bottom: 10px
@@ -67,7 +85,6 @@
             display: block
             padding: 10px
             text-align: left
-            border-bottom: 1px solid #eee
 
 // Media Query para Desktop
 @media only screen and (min-width: 1000px)

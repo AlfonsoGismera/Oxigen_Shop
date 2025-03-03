@@ -6,6 +6,8 @@
 .prices
   text-align: center
   padding: 40px 20px
+  font-family: $font-open-sans
+  margin-top: 2em
 
 .prices__title
   font-weight: 400
@@ -24,8 +26,9 @@
   padding-bottom: 60px // Espacio extra para el botón
   background: white
   padding: 20px
-  margin-top: 2em
-  border-radius: 10px
+  margin-top: 1em
+  margin-right: 2em
+  border-radius: 18px
   width: 300px
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
   text-align: center
@@ -34,31 +37,37 @@
 .basic
   border: 1px solid $red
   &:hover
-    box-shadow: 5px 10px 27px 0px $red
+    box-shadow: 5px 5px 20px -5px $red
 
 .professional
   border: 1px solid $primary-color
   &:hover
-    box-shadow: 5px 10px 27px 0px $primary-color
+    box-shadow: 5px 5px 20px -5px$primary-color
 
 .premium
   border: 1px solid $green
   &:hover
-    box-shadow: 5px 10px 27px 0px $green
+    box-shadow: 5px 5px 20px -5px $green
 
 .prices__item-title
   margin-bottom: 10px
   font-weight: 700
-  font-size: 21px
-  line-height: 24.65px
+  font-size: 20px
+  line-height: 24px
   letter-spacing: 0%
 
 .prices__item-price
-  font-family: $font-open-sans
   font-weight: 300
   font-size: 46px
   line-height: 64px
-  letter-spacing: 0%
+.prices__item-ofer
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  font-family: $font-raleway
+  font-weight: 700
+  font-size: 12px
+  line-height: 14.09px
 
 .basic .prices__item-price
   color: $red
@@ -75,21 +84,35 @@
   margin: 20px 0
 
 .prices__features li
-  font-size: 16px
+  font-size: 14px
   display: flex
   align-items: center
   gap: 10px
-  margin: 2em
+  margin: 1.8em
   justify-content: center
   font-weight: 400
   font-size: 14px
   line-height: 19.07px
+
 // Colores de los check
+.check,
+.cross
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 18px
+  height: 18px
+  top: 1px
+  border-radius: 4px
+  margin-right: 0.5em
+
 .check
+  border: 2px solid $green
   color: $green
 
 .cross
   color: $red
+  border: 2px solid $red
 
 .prices__button
   position: absolute
@@ -99,7 +122,6 @@
   display: inline-block
   padding: 15px 50px
   border-radius: 33px
-  font-family: $font-open-sans
   border: 1px solid
   font-size: 18px
   cursor: pointer

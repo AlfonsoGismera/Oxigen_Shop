@@ -5,34 +5,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OXYGEN Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <!-- Body -->
+
 <body>
   <!-- Header -->
   <header class="header">
-    <!--H3 colozado a la izquierda -->
     <div class="header__logo">
       <h3>OXYGEN Shop</h3>
     </div>
-    <!-- Siguientes pasos para boton con JavaScrit -->
     <button class="header__menu-button">
-      <i class="header__menu-icon fas fa-bars"></i>
+      <img class="header__menu-imagen" src="./img/Menu.svg" alt="Menu" />
     </button>
-    <!--Nav a la izquierda (se ocultara en  las siguientes fases) -->
     <nav class="header__nav">
       <ul class="header__menu">
         <li class="header__menu-item">
-          <a href="#home">Home</a>
+          <a href="#home">WHY US</a>
         </li>
         <li class="header__menu-item">
-          <a href="#features">Features</a>
+          <a href="#features">BENEFITS</a>
         </li>
         <li class="header__menu-item">
-          <a href="#prices">Prices</a>
+          <a href="#prices">PRICES</a>
         </li>
         <li class="header__menu-item">
-          <a href="#contact">Contact</a>
+          <a href="#contact">CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -133,7 +136,7 @@
           <!-- Card 4 (solo imagen que rellena todo) -->
           <div class="card card-4">
             <div class="image-content">
-              <img src="./img/card3-4_men.png" alt="Imagen grande" />
+              <img src="./img/card3-4_men.svg" alt="Imagen grande" />
             </div>
           </div>
         </div>
@@ -148,7 +151,7 @@
         <!-- Basic Plan -->
         <div class="prices__item basic">
           <h3 class="prices__item-title">Basic</h3>
-          <p class="prices__item-price">$9</p>
+          <p class="prices__item-price">$0</p>
           <ul class="prices__features">
             <li><span class="check">✔</span> 100 MB HDD</li>
             <li><span class="check">✔</span> 1 Subdomain</li>
@@ -162,6 +165,7 @@
         <div class="prices__item professional">
           <h3 class="prices__item-title">Professional</h3>
           <p class="prices__item-price">$25</p>
+          <p class="prices__item-ofer">Limited offer</p>
           <ul class="prices__features">
             <li><span class="check">✔</span> 500 MB HDD</li>
             <li><span class="check">✔</span> 2 Subdomains</li>
@@ -175,6 +179,7 @@
         <div class="prices__item premium">
           <h3 class="prices__item-title">Premium</h3>
           <p class="prices__item-price">$60</p>
+          <p class="prices__item-ofer">Limited offer</p>
           <ul class="prices__features">
             <li><span class="check">✔</span> 2 GB HDD</li>
             <li><span class="check">✔</span> 5 Subdomains</li>
@@ -214,10 +219,16 @@
             <input type="email" id="email" name="email" />
           </div>
           <div class="form-group consent">
-            <input type="checkbox" id="consent" name="consent" />
-            <label for="consent">
-              I hereby give consent for my personal data...
-            </label>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="consent" name="consent" />
+              <label for="consent">
+                I hereby give consent for my personal data included in my application to be processed for the purposes
+                of the recruitment process under the European Parliament’s
+                and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016,
+                with regard to the processing of personal data and on the
+                free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+              </label>
+            </div>
           </div>
           <button type="submit" class="cta">Send</button>
         </form>
@@ -230,14 +241,14 @@
     <div class="footer__content">
       <div class="footer__left">
         <h3 class="footer__logo">OXYGEN Shop</h3>
-        <p class="footer__copyright">© 2023 OXYGEN. All Rights Reserved</p>
+        <p class="footer__copyright">© 2022 OXYGEN. All Rights Reserved</p>
       </div>
       <div class="footer__right">
         <a href="#" class="footer__social-icon">
-          <img src="./img/facebook.png" alt="Facebook" class="footer__social-image">
+          <img src="./img/facebook.svg" alt="Facebook" class="footer__social-image">
         </a>
         <a href="#" class="footer__social-icon">
-          <img src="./img/twitter.png" alt="Twitter" class="footer__social-image">
+          <img src="./img/twitter.svg" alt="Twitter" class="footer__social-image">
         </a>
 
       </div>

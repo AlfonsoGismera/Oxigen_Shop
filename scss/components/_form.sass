@@ -8,7 +8,6 @@
   padding: 20px 10px
 
 /* Form Container */
-
 .form-container
   background-color: #fff
   padding: 30px
@@ -18,19 +17,16 @@
   font-size: 16px
   line-height: 22px
 
-/* Form Left Información de contacto email y tlf */
+/* Form Left - Información de contacto email y tlf */
 .form-left
   padding-left: 30px
 
   h1
-    margin-bottom: 10px
+    margin-bottom: 1em
     font-family: $font-raleway // Solo el h1 usa Raleway
     font-weight: 400
-    font-size: 39px
+    font-size: 49px
     line-height: 57.53px
-
-  p
-    margin-bottom: 3.1em
 
   .contact-info
     display: flex
@@ -39,60 +35,62 @@
     color: #A5A5A5
     gap: 20px
 
-    p
-      display: flex
-      align-items: center
-      margin-bottom: 0
-      margin-right: 20px
-      img
-        margin-right: 10px
-        width: 20px
-        height: 20px
+  & p
+    display: flex
+    align-items: center
+    margin-right: 1em
+    margin-bottom: 3.1em
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+
+  & img
+    margin-right: 10px
+    width: 27px
+    height: 27px
 
 /* Contact Form */
-
 .contact-form
   width: 100%
-  // Agregamos padding-left para alinear con .form-left
   padding-left: 30px
 
-  .form-group
+  & .form-group
     margin-bottom: 20px
     color: #08A6E4
 
-  label
+  & label
     display: block
-    font-weight: 600
     font-size: 11px
     line-height: 14.98px
     letter-spacing: 3.28px
 
-    margin-bottom: 1em
-    margin-top: 1em
-// Ponemos los tipos de texto que queremos
-  input[type="text"],
-  input[type="email"]
-    width: 100%
-    padding: 10px
-    border: none
-    border-bottom: 1px solid #ddd
+.contact-form input[type="text"],
+.contact-form input[type="email"]
+  width: 100%
+  padding: 10px
+  border: none
+  border-bottom: 1px solid #ddd
 
-  .consent
-    display: flex
-    align-items: center
-    color: #707070
-    margin-bottom: 20px
-    font-weight: 400
-    font-size: 12px
-    line-height: 16.34px
+.contact-form .consent
+  display: flex
+  color: rgba(112, 112, 112, 1)
+  font-weight: 400
+  font-size: 12px
+  line-height: 16.34px
+  flex-wrap: wrap
 
-  input[type="checkbox"]
-    margin-right: 1em
-    width: 24px
-    height: 24px
-    top: 195px
-    left: 456px
+.checkbox-wrapper
+  display: flex
+  align-items: flex-start
 
+
+.contact-form input[type="checkbox"]
+  width: 24px
+  height: 24px
+  margin-right: 1em
+  flex-wrap: wrap
+
+/* Botón de enviar */
 .cta
   display: block
   margin-left: auto
@@ -111,7 +109,6 @@
     background-color: $secondary-color
 
 /* Contenedor y botón de enviar */
-
 .save-container
   display: flex
   justify-content: space-between
@@ -125,8 +122,9 @@
   padding-right: 15px
   flex-grow: 1
 
-/*Versión para ordenadores         */
+/* Media Queries */
 
+// Versión para ordenadores
 @media only screen and (min-width: 1000px)
   .form-container
     display: flex
@@ -140,8 +138,7 @@
     width: 55%
     padding-left: 30px
 
-/* Media Queries para Responsives */
-
+// Versión móvil y tablet
 @media (max-width: 768px)
   .form-container
     padding: 15px
@@ -156,13 +153,17 @@
     flex-direction: column
     align-items: flex-start
     width: 100%
-// Versión móvil
+
+// Versión móvil pequeña
 @media (max-width: 480px)
   header
     font-size: 18px
+
   .form-container
     padding: 15px
+
   footer
     padding: 15px 0
+
   .footer-content a
     font-size: 12px
