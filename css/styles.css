@@ -377,6 +377,7 @@ body {
   background-color: #55DFB4;
 }
 .cards-section .cards-row .card-3, .cards-section .cards-row .card-4 {
+  margin: 1em;
   flex: 1;
   display: flex;
   align-items: center;
@@ -419,14 +420,7 @@ body {
   .cards-section .cards-row .card-3,
   .cards-section .cards-row .card-4 {
     flex-direction: column;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  .card-3 {
-    margin-bottom: 0;
-  }
-  .card-4 {
-    margin-top: 0;
+    margin: 0;
   }
   .cards-section .card-4 .image-content,
   .cards-section .card-1 .image-content,
