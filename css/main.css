@@ -129,7 +129,7 @@ body {
 .hero__image {
   width: 100%;
   margin-top: 20px;
-  /* Ajuste para pc */
+  /* Ajuste para Sobremesa */
 }
 @media only screen and (min-width: 1000px) {
   .hero__image .hero {
@@ -140,9 +140,10 @@ body {
 /* 3.5. SALES */
 .sales {
   text-align: center;
+  /* Contenedor para el ícono y el círculo dibujado */
 }
 .sales__title {
-  font-size: 36px;
+  font-size: 46px;
   margin: 20px;
   font-weight: 400;
   line-height: 42px;
@@ -151,30 +152,63 @@ body {
 .sales__items {
   display: flex;
   justify-content: center;
+  gap: 30px;
 }
 .sales__item {
-  text-align: center;
-  margin: 0 10px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  margin: 0 10px;
+}
+.sales__icon-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+.sales__icon-wrapper .sales__circle {
+  position: absolute;
+  z-index: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  left: -15px;
+  top: 0px;
+}
+.sales__icon-wrapper .sales__circle--rojo {
+  background-color: #ff6b6b;
+}
+.sales__icon-wrapper .sales__circle--azul {
+  background-color: #48dbfb;
+}
+.sales__icon-wrapper .sales__circle--verde {
+  background-color: #1dd1a1;
 }
 .sales__icon {
-  width: 150px;
-  height: 150px;
-  vertical-align: middle;
-  margin-bottom: 10px;
-  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+.sales__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 20px;
 }
 .sales__number {
   font-size: 1.2em;
-  margin-bottom: 5px;
+  margin-top: 0.5em;
+  font-weight: 600;
+}
+.sales__bullet {
+  font-size: 1.2em;
+  color: #000;
 }
 .sales__text {
-  font-size: 0.9em;
+  margin-top: 1em;
+  font-size: 16px;
   color: #888;
-  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -305,9 +339,7 @@ body {
 .cards-section .cards-row {
   display: flex;
   gap: 20px;
-}
-.cards-section .cards-row .card-3 {
-  margin-right: 2em;
+  justify-content: flex-start;
 }
 .cards-section .cards-row .card-3 .text-content p {
   position: relative;
@@ -333,6 +365,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 .cards-section .cards-row .card-4 .text-content {
   flex: 1;
@@ -340,60 +373,19 @@ body {
 .cards-section .cards-row .card-4 .image-content {
   flex: 1;
   text-align: right;
-  position: relative;
   flex-shrink: 0;
 }
 .cards-section .cards-row .card-4 .image-content img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
-/*************************************************************
- * * Responsividad para tablets/móviles
- * *************************************************************/
-@media (max-width: 768px) {
-  .cards-section .card {
-    padding: auto;
-    flex-direction: column;
-    text-align: center;
-  }
-  .cards-section .image-content {
-    text-align: center;
-  }
-  .cards-section .cards-row {
-    flex-direction: column;
-  }
-  .cards-section .cards-row .card-3,
-  .cards-section .cards-row .card-4 {
-    margin-bottom: 30px;
-    flex-direction: column;
-  }
-  .cards-section .card-4 .image-content {
-    text-align: center;
-  }
-  .cards-section .card-1 .image-content {
-    text-align: center;
-  }
-  .cards-section .card-2 .image-content {
-    text-align: center;
-  }
-  .cards-section .card-1 .text-content p::after,
-  .cards-section .card-2 .text-content p::after,
-  .cards-section .card-3 .text-content p::after {
-    display: none;
-  }
-}
-/* Form Section                              */
+/* Form Section*/
 .form-section {
   display: block;
   padding: 20px 10px;
 }
 
-/* Form Container - Mobile First             */
+/* Form Container */
 .form-container {
   background-color: #fff;
   padding: 30px;
@@ -404,7 +396,7 @@ body {
   line-height: 22px;
 }
 
-/* Form Left - Información de contacto       */
+/* Form Left Información de contacto email y tlf */
 .form-left {
   padding-left: 30px;
 }
@@ -437,7 +429,7 @@ body {
   height: 20px;
 }
 
-/* Contact Form                              */
+/* Contact Form */
 .contact-form {
   width: 100%;
   padding-left: 30px;
@@ -454,29 +446,6 @@ body {
   letter-spacing: 3.28px;
   margin-bottom: 1em;
   margin-top: 1em;
-}
-.contact-form input[type=text],
-.contact-form input[type=email] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-.contact-form .consent {
-  display: flex;
-  align-items: center;
-  color: #707070;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.34px;
-}
-.contact-form input[type=checkbox] {
-  margin-right: 1em;
-  width: 24px;
-  height: 24px;
-  top: 195px;
-  left: 456px;
 }
 
 .cta {
@@ -497,7 +466,7 @@ body {
   background-color: rgb(6.2711864407, 130.1271186441, 178.7288135593);
 }
 
-/* Contenedor del resultado y botón de guardar*/
+/* Contenedor y botón de enviar */
 .save-container {
   display: flex;
   justify-content: space-between;
@@ -513,7 +482,7 @@ body {
   flex-grow: 1;
 }
 
-/* Desktop: Versión para ordenadores         */
+/*Versión para ordenadores         */
 @media only screen and (min-width: 1000px) {
   .form-container {
     display: flex;
@@ -528,7 +497,7 @@ body {
     padding-left: 30px;
   }
 }
-/* Media Queries para Responsive Design      */
+/* Media Queries para Responsives */
 @media (max-width: 768px) {
   .form-container {
     padding: 15px;
@@ -584,6 +553,7 @@ body {
   background: white;
   padding: 20px;
   margin-right: 50px;
+  margin-top: 1em;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -711,36 +681,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.footer__left {
-  display: flex;
-  flex-direction: column;
-}
-.footer__logo {
-  color: #08A6E4;
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 5px;
-}
-.footer__copyright {
-  font-size: 12px;
-  color: #555;
-}
-.footer__right {
-  display: flex;
-  align-items: center;
-}
-.footer__social-icon {
-  margin-left: 10px;
-  color: #08A6E4;
-  font-size: 1.5em;
-  display: inline-block;
-}
-.footer__social-image {
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 768px) {
