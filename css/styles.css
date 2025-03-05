@@ -140,7 +140,7 @@ body {
   padding: 15px 106px;
   cursor: pointer;
   border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(6.2711864407, 130.1271186441, 178.7288135593, 0.5);
+  box-shadow: 0 4px 5px rgba(6.2711864407, 130.1271186441, 178.7288135593, 0.5);
   transition: background-color 0.3s;
 }
 .hero__cta:hover {
@@ -190,8 +190,8 @@ body {
 .sales__icon-wrapper .sales__circle {
   position: absolute;
   z-index: 0;
-  width: 45px;
-  height: 45px;
+  width: 47px;
+  height: 47px;
   border-radius: 50%;
   left: -15px;
   top: 0px;
@@ -431,6 +431,12 @@ body {
   .cards-section .card-2 .text-content p::after,
   .cards-section .card-3 .text-content p::after {
     display: none;
+  }
+  .cards-section .card-3 {
+    border-bottom: none;
+  }
+  .cards-section .card-4 {
+    border-top: none;
   }
 }
 /* Form Section*/
