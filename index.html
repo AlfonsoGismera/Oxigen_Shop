@@ -26,16 +26,16 @@
     <nav class="header__nav">
       <ul class="header__menu">
         <li class="header__menu-item">
-          <a href="#home">WHY US</a>
+          <a class="menu-link" data-section="benefits" href="#home">WHY US</a>
         </li>
         <li class="header__menu-item">
-          <a href="#features">BENEFITS</a>
+          <a class="menu-link" data-section="benefits" href="#benefits">BENEFITS</a>
         </li>
         <li class="header__menu-item">
-          <a href="#prices">PRICES</a>
+          <a class="menu-link" data-section="prices" href="#prices">PRICES</a>
         </li>
         <li class="header__menu-item">
-          <a href="#contact">CONTACT</a>
+          <a class="menu-link" data-section="contact" href="#prices">CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -88,10 +88,10 @@
     </section>
 
 
-    <!-- Sirve para poner  a la zona -->
+    <!-- Sirve para poner color a la zona -->
     <section class="color">
       <!-- Cards -->
-      <section class="cards-section">
+      <section id="benefits" class="cards-section">
         <!-- Card 1 imagen en la derecha   -->
         <div class="card card-1">
           <div class="text-content">
@@ -145,7 +145,7 @@
 
     <!-- Precios -->
 
-    <section class="prices" id="prices">
+    <section id="prices" class="prices" id="prices">
       <h2 class="prices__title">Pricing</h2>
       <div class="prices__list">
         <!-- Basic Plan -->
@@ -192,8 +192,8 @@
       </div>
     </section>
 
-    <!-- Form -->
-    <section class="form-section">
+    <!-- Form Contact -->
+    <section id="contact" class="form-section">
       <div class="form-container">
         <div class="form-left">
           <h1>Any questions?</h1>
@@ -254,6 +254,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
