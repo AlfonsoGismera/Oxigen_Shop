@@ -1,2 +1,9 @@
+# Archivo .gitattributes
+
+# Indica que Git debe determinar automáticamente si los archivos deben ser tratados como texto o binarios
+# y normalizar los finales de línea según la configuración predeterminada de Git.
 * text=auto
+
+# Indica que todos los archivos con extensión .css deben ser tratados como texto
+# y usar finales de línea LF (Line Feed).
 *.css text eol=lf
