@@ -1,1 +1,2 @@
 list-style-image: url(../assets/Checkbox.png);
+sass --watch scss/main.sass css/styles.css
