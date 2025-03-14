@@ -68,7 +68,6 @@ export default function formValidation() {
           .then((res) => res.json())
           .then((data) => {
             console.log("Suscripción exitosa:", data);
-            // Aquí podrías mostrar un mensaje de éxito o redirigir, etc.
           })
           .catch((error) => {
             console.error("Error en la suscripción:", error);
