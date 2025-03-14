@@ -51,7 +51,23 @@
 
 
   <main>
-    <!-- Main botones de de tienda -->
+    <!-- Modal Newsletter -->
+    <div id="newsletter-modal" class="modal">
+      <div class="modal-content">
+          <button class="close-button">
+              <img src="./img/Menu_Close.svg" alt="Cerrar" class="close-icon" />
+          </button>
+          <p>Suscríbete a nuestro boletín</p>
+          <form id="newsletter-form">
+              <input type="email" name="email" required placeholder="Tu correo electrónico" />
+              <button type="submit">Suscribirse</button>
+          </form>
+          <p id="subscription-message" class="hidden">¡Gracias por suscribirte!</p>
+      </div>
+  </div>
+  
+
+    <!-- Main botones de tienda -->
     <section class="hero" id="home">
       <h1 class="hero__title">Sell More!</h1>
       <p class="hero__subtitle">The most popular sales platform in the country</p>
@@ -157,7 +173,7 @@
 
     <section id="prices" class="prices">
       <h2 class="prices__title">Pricing</h2>
-          <!-- Selector de precios -->
+      <!-- Selector de precios -->
       <div class="currency-selector">
         <label for="currency">Select Currency:</label>
         <select id="currency">

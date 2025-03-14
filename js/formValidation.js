@@ -5,7 +5,7 @@ export default function formValidation() {
       let name = document.getElementById("name").value;
       let email = document.getElementById("email").value;
       let consent = document.getElementById("consent").checked;
-      let nameValid = true; //Tiene que iniciar en true
+      let nameValid = true; //Tienen que iniciar en true
       let emailValid = true;
       let consentValid = true;
 
@@ -19,7 +19,7 @@ export default function formValidation() {
         errorName.className = "error-message";
         errorName.style.color = "red";
         errorName.textContent = "El nombre debe tener entre 2 y 100 letras.";
-        document.getElementById("name").parentNode.appendChild(errorName); // Seleccionamos el div padre del div padre del checkbox
+        document.getElementById("name").parentNode.appendChild(errorName);
         nameValid = false;
       } else {
         document.getElementById("name").style.borderColor = "";
@@ -40,7 +40,7 @@ export default function formValidation() {
         document.getElementById("email").style.borderColor = "";
       }
 
-      // Validación del consentimiento
+      // Validación del checkbox
       if (!consent) {
         document.getElementById("consent").style.outlineColor = "red";
         let errorConsent = document.createElement("div");
@@ -49,7 +49,7 @@ export default function formValidation() {
         errorConsent.textContent = "Debes aceptar los términos.";
         document
           .getElementById("consent")
-          .parentNode.parentNode.appendChild(errorConsent); // Se tiene que subir 2 niveles  o si no se ponne con el texto  de consentimiento
+          .parentNode.parentNode.appendChild(errorConsent);
         consentValid = false;
       } else {
         document.getElementById("consent").style.outlineColor = "";
@@ -58,6 +58,21 @@ export default function formValidation() {
       // Evitar el envío si algún campo no es válido
       if (!nameValid || !emailValid || !consentValid) {
         event.preventDefault();
+      } else {
+        event.preventDefault();
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          body: JSON.stringify({ name, email, consent }),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("Suscripción exitosa:", data);
+            // Aquí podrías mostrar un mensaje de éxito o redirigir, etc.
+          })
+          .catch((error) => {
+            console.error("Error en la suscripción:", error);
+          });
       }
     });
 }
