@@ -24,7 +24,7 @@ export default function initReturnTop() {
           const footerVisible = footerRect.top < window.innerHeight;
       
           if (footerVisible) {
-            returnTopBtn.style.opacity = 0; // Ocultar si el footer es visible
+            returnTopBtn.style.opacity = 0.2; // Ocultar si el footer es visible
           } else {
             returnTopBtn.style.opacity = 0.7; // Mostrar si no está en el footer
           }

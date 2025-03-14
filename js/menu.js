@@ -2,7 +2,7 @@ export default function initMenu() {
   console.log("initMenu running");
 
   // Event listener para los links del menú
-  const menuLinks = document.querySelectorAll(".header__menu-item a"); // Selector mejorado
+  const menuLinks = document.querySelectorAll(".header__menu-item a");
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -29,9 +29,9 @@ export default function initMenu() {
       // Cambiar la imagen según el estado del menú
       const imgBtn = botonHamburguesa.querySelector(".header__menu-imagen");
       if (navMenu.classList.contains("header__nav--active")) {
-        imgBtn.src = "./img/Menu_Close.svg"; // Imagen de la X
+        imgBtn.src = "./img/Menu_Close.svg"; 
       } else {
-        imgBtn.src = "./img/Menu.svg"; // Imagen del menú hamburguesa
+        imgBtn.src = "./img/Menu.svg"; 
       }
     });
   } else {

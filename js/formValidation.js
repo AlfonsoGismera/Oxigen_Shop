@@ -19,7 +19,7 @@ export default function formValidation() {
         errorName.className = "error-message";
         errorName.style.color = "red";
         errorName.textContent = "El nombre debe tener entre 2 y 100 letras.";
-        document.getElementById("name").parentNode.appendChild(errorName); // Seleccionamos el div padre del div padre del checkbox 
+        document.getElementById("name").parentNode.appendChild(errorName); // Seleccionamos el div padre del div padre del checkbox
         nameValid = false;
       } else {
         document.getElementById("name").style.borderColor = "";
@@ -49,7 +49,7 @@ export default function formValidation() {
         errorConsent.textContent = "Debes aceptar los términos.";
         document
           .getElementById("consent")
-          .parentNode.parentNode.appendChild(errorConsent); //(se tiene que subir 2 niveles  o si no se ponne con el texto  de consentimiento
+          .parentNode.parentNode.appendChild(errorConsent); // Se tiene que subir 2 niveles  o si no se ponne con el texto  de consentimiento
         consentValid = false;
       } else {
         document.getElementById("consent").style.outlineColor = "";
