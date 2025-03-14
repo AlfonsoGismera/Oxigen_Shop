@@ -216,14 +216,14 @@
             </p>
           </div>
         </div>
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" action="#" id="myform" method="post">
           <div class="form-group">
             <label for="name">NAME</label>
             <input type="text" id="name" name="name" />
           </div>
           <div class="form-group">
             <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" />
+            <input type="text" id="email" name="email" />
           </div>
           <div class="form-group consent">
             <div class="checkbox-wrapper">
@@ -241,10 +241,14 @@
         </form>
       </div>
     </section>
+    <!-- Botón Return to Top -->
+    <button id="return-top-button" class="return-top">
+      <img src="./img/Menu.svg"" alt=" Return to top" class="return-top__icon" />
+    </button>
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__content">
       <div class="footer__left">
         <h3 class="footer__logo">OXYGEN Shop</h3>

@@ -1,8 +1,8 @@
 // Main.js
 import initMenu from "./menu.js";
 // import initScroller from './scroller.js';
-// import initReturnToTop from './returnToTop.js';
-// import initFormValidation from './formValidation.js';
+import initReturnToTop from './returnToTop.js';
+import initFormValidation from './formValidation.js';
 // import initChangeDivisa from './changeDivisa.js';
 // import initNewsletterModal from './newsletterModal.js';
 // import Slider from './slider.js';
@@ -10,8 +10,8 @@ import initMenu from "./menu.js";
 document.addEventListener("DOMContentLoaded", () => {
   initMenu();
   //   initScroller();
-  //   initReturnToTop();
-  //   initFormValidation();
+    initReturnToTop();
+    initFormValidation();
   //   initChangeDivisa();
   //   initNewsletterModal();
 
