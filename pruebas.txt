@@ -4,3 +4,5 @@ primero
 permitir pegado
 luego para probar el modal
 localStorage.removeItem('newsletterClosed');
+
+ git checkout main
