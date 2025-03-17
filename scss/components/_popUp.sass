@@ -1,6 +1,13 @@
-// Base de la pagina
+// Base de la página
 @use '../base/variables' as *
 @use '../base/reset' as *
+
+// Para que cuando sea movil no pueda hacer scroll 
+
+body.modal-open
+    overflow: hidden
+    position: fixed
+    width: 100%
 
 .modal
     display: none
@@ -16,6 +23,7 @@
     font-family: $font-raleway
     font-weight: 700
     font-size: 24px
+    backdrop-filter: blur(5px)
 
     &.show
         display: flex
@@ -25,36 +33,76 @@
         padding: 20px
         position: relative
         border-radius: 8px
-        width: 100%
+        width: 90% // Ajuste para móviles
         max-width: 400px
         border: 2px solid #08A6E4
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3)
-        // Espaciado entre elementos internos
-        > *
-            margin-bottom: 1em
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
 
-.close-button
-    position: absolute
-    top: 5px
-    right: 5px
-    width: 40px
-    height: 40px
-    display: flex
-    justify-content: center
-    align-items: center
-    background: none
-    border: none
-    cursor: pointer
-    transition: transform 0.2s ease-in-out
-    border-radius: 50%
+    &-header
+        background-color: #08A6E4
+        color: #fff
+        padding: 10px
+        border-radius: 8px 8px 0 0
+        text-align: center
 
-    &:hover
-        transform: scale(1.1)
+    &-body
+        padding: 20px
 
-    .close-icon
-        width: 24px
-        height: 24px
+    &-footer
+        padding: 10px
+        text-align: center
+        border-top: 2px solid #F7F7F7
 
+    .close-button
+        position: absolute
+        top: -18px
+        right: -18px
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #fff
+        border: 2px solid #08A6E4
+        cursor: pointer
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out
+        border-radius: 50%
+
+        &:hover
+            transform: scale(1.2)
+            background-color: rgba(0, 0, 0, 0.1)
+
+        .close-icon
+            width: 24px
+            height: 24px
+            fill: #333
 
 #subscription-message.hidden
     display: none
+
+@media (max-width: 480px)
+    .modal
+        &-content
+            width: 95%
+            padding: 15px
+
+        &-header
+            padding: 8px
+            font-size: 1.2rem
+
+        &-body
+            padding: 15px
+
+        &-footer
+            padding: 8px
+            font-size: 0.9rem
+
+        .close-button
+            top: -15px
+            right: -15px
+            width: 35px
+            height: 35px
+
+            .close-icon
+                width: 20px
+                height: 20px

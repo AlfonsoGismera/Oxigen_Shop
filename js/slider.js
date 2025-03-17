@@ -17,7 +17,7 @@ export default function initSlider() {
     });
     const dots = dotsContainer.querySelectorAll('span');
   
-    // Función para actualizar el slider (mover imágenes y activar punto)
+    // Función para actualizar el slider 
     function updateSlider() {
       slider.style.transform = `translateX(-${currentIndex * 100}%)`;
       dots.forEach(dot => dot.classList.remove('active'));
@@ -38,7 +38,7 @@ export default function initSlider() {
     // Evento para los puntos
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
-        currentIndex = parseInt(dot.dataset.index, 10);
+        currentIndex = parseInt(dot.dataset.index, 10); //interpreta en base decimal
         updateSlider();
       });
     });

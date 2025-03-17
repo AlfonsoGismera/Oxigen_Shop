@@ -6,3 +6,8 @@ luego para probar el modal
 localStorage.removeItem('newsletterClosed');
 
  git checkout main
+
+Cuando salga el pop q no pueda  scroll
+selcetor en centro 
+y che deja boniuto el modal boludo
+targetas ponmerla  bien

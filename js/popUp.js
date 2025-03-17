@@ -1,9 +1,5 @@
 export default async function initPopUp() {
-  // cambia a true para guardar el estado en localStorage
   const saveSubscriptionState = false;
-
-  //  descomenta estas líneas para activar el modal solo una vez
-  // if (saveSubscriptionState && localStorage.getItem('newsletterClosed') === 'true') return;
 
   const modal = document.getElementById("newsletter-modal");
   const closeButton = modal.querySelector(".close-button");
@@ -11,22 +7,22 @@ export default async function initPopUp() {
   const subscriptionMessage = document.getElementById("subscription-message");
 
   let modalShown = false;
-
+  //  Detener scroll
   const showModal = () => {
     if (!modalShown) {
-      modal.classList.add("show");
-      modalShown = true;
+        modal.classList.add("show");
+        modalShown = true;
+        document.body.classList.add("modal-open"); 
     }
-  };
+};
 
-  const closeModal = () => {
+const closeModal = () => {
     modal.classList.remove("show");
     if (saveSubscriptionState) localStorage.setItem("newsletterClosed", "true");
-  };
-
+    document.body.classList.remove("modal-open"); 
+};
 
   setTimeout(showModal, 5000);
-
 
   window.addEventListener("scroll", () => {
     const docHeight =
@@ -36,20 +32,16 @@ export default async function initPopUp() {
     }
   });
 
-  // Cerrar modal con botón X
   closeButton.addEventListener("click", closeModal);
 
-  // Cerrar modal al hacer clic fuera del contenido
   window.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
   });
 
-  // Cerrar modal con tecla ESC
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("show")) closeModal();
   });
 
-  // Envío del formulario
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     fetch("https://jsonplaceholder.typicode.com/posts", {
