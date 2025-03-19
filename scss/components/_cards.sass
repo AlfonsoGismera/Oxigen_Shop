@@ -9,14 +9,13 @@
   padding: 20px 0
   margin-top: 2em
 
-  // Estilos generales para cada card
   .card
     display: flex
     justify-content: space-between
     align-items: center
     margin-top: 3em
     border-radius: 8px
-    padding: 1em
+    padding: 4em 2em 6em 2em
     background-color: #FFFFFF
     border: 1px solid rgba(232, 233, 237, 1)
     align-items: stretch
@@ -29,6 +28,7 @@
         font-weight: 400
         font-size: 36px
         line-height: 42px
+        margin-top: 10px
 
       p
         font-family: $font-open-sans
@@ -36,15 +36,14 @@
         font-size: 16px
         line-height: 22px
         white-space: pre-line
-        margin: 1em
 
     .image-content
-      position: relative // Asegura que la imagen tenga z-index
-      z-index: 1 // Asegura que la imagen esté encima de los pseudo-elementos
+      position: relative
+      z-index: 1
       img
         max-width: 100%
-        height: auto
         display: block
+        height: 280px
 
   // Card 1: Texto a la izquierda, imagen a la derecha
   .card-1
@@ -57,9 +56,9 @@
           content: ""
           position: absolute
           left: 0
-          bottom: 0
+          margin-top: 3em
           height: 4px
-          width: 100%
+          width: 70%
           background-color: $red
 
     .image-content
@@ -67,14 +66,14 @@
       &::before // Cuadrado rojo
         content: ""
         position: absolute
-        top: -1%
-        right: 3%
-        width: 40%
+        top: -11%
+        right: 2%
+        width: 43%
         height: 70%
         border-radius: 25px
-        background-color: $red
-        z-index: -1 // Coloca el rectángulo detrás de la imagen
-        transform: rotate(15deg)
+        background-color: #FB3B64
+        z-index: -1
+        transform: rotate(50deg)
 
   // Card 2: Imagen a la izquierda, texto a la derecha
   .card-2
@@ -86,33 +85,34 @@
           content: ""
           position: absolute
           height: 4px
-          width: 100%
+          width: 70%
+          margin-top: 3em
           background-color: $primary-color
 
     .image-content
       &::after // Círculo
         content: ""
         position: absolute
-        top: 45%
-        left: 45%
+        top: 47%
+        left: 38%
         transform: translate(-50%, -50%)
-        width: 70%
-        height: 70%
-        background-color: $primary-color
+        width: 68%
+        height: 96%
+        background-color: #08A6E4
         border-radius: 50%
-        z-index: -1 // Coloca el círculo detrás de la imagen
+        z-index: -1
 
   @media (max-width: 768px)
     flex-direction: column-reverse // Invierte el orden de los elementos
     align-items: center
 
     .text-content
-      order: 2 // Coloca el texto después de la imagen
+      order: 2
       width: 100%
       text-align: center
 
     .image-content
-      order: 1 // Coloca la imagen primero
+      order: 1
       width: 100%
       text-align: center
     .card-2
@@ -128,22 +128,20 @@
 
     // Card 3: Solo texto con línea
     .card-3
-      margin-right:  1em
+      margin-right: 1em
       .text-content
         p
-          position: relative
-          padding-bottom: 10px
           &::after
             content: ""
             position: absolute
             left: 0
-            bottom: 0
             height: 4px
-            width: 100%
+            width: 70%
+            margin-top: 2em
             background-color: $green
 
     // Estilos para que ambas cards (3 y 4) se muestren en una fila
-    .card-3, .card-4     
+    .card-3, .card-4
       flex: 1
       display: flex
       align-items: center
@@ -166,7 +164,6 @@
 
       & .image-content img
         max-width: 100%
-        height: auto
         object-fit: cover
 
 //  Responsividad para tablets/móviles
@@ -197,7 +194,6 @@
   .cards-section .card-3 .text-content p::after
     display: none
   .cards-section .card-3
-    border-bottom: none  
+    border-bottom: none
   .cards-section .card-4
     border-top: none
-

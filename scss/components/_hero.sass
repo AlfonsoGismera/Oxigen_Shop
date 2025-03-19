@@ -5,30 +5,41 @@
 /* 3. HERO */
 .hero
   text-align: center
-  padding: 20px
+  padding: 3em
   &__title
     font-size: 24px
-    margin-bottom: 10px
+    margin: 10px
+    font-weight: 400
+    font-size: 49px
+    line-height: 57px
+    text-align: center
+
   &__subtitle
     font-size: 16px
-    margin-bottom: 15px
+    margin: 15px
+    font-family: $font-open-sans
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+
   &__cta
     background-color: $primary-color
     color: #fff
     border: none
+    margin-top: 15px
     padding: 15px 106px
     cursor: pointer
     border-radius: 50px
-    box-shadow: 0 4px 5px rgba($secondary-color, 0.5) // Sombra del mismo color
+    box-shadow: 0 4px 5px rgba($secondary-color, 0.5) 
     transition: background-color 0.3s
 
     &:hover
-      background-color: $secondary-color // Oscurece el color en el hover
+      background-color: $secondary-color 
 
   &__image
     width: 100%
     margin-top: 20px
-    /* Ajuste para Sobremesa */
     @media only screen and (min-width: 1000px)
       .hero
         flex-direction: row

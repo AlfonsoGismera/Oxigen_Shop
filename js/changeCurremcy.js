@@ -33,7 +33,7 @@ export default async function initChangeCurrency() {
         const usdPrice = pricesUSD[index];
         const rateProperty = rateProperties[currency];
         const convertedPrice = rateProperty ? (usdPrice * rates[rateProperty]).toFixed(2) : usdPrice.toFixed(2);
-        element.textContent = currencySymbols[currency] + convertedPrice;
+        element.textContent = `${currencySymbols[currency]}  ${convertedPrice}`;
       });
     } catch (error) {
       console.error("Error al obtener o procesar los tipos de cambio:", error);

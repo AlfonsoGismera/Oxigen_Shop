@@ -3,6 +3,16 @@
 @use '../base/reset' as *
 
 // Para que cuando sea movil no pueda hacer scroll 
+.modal_submit
+  background-color: $primary-color
+  color: #fff
+  border: none
+  padding: 3px
+  font-size: 0.7em
+  cursor: pointer
+  border-radius: 40px
+  box-shadow: 0 4px 8px rgba($secondary-color, 0.5)
+  transition: background-color 0.3s 
 
 body.modal-open
     overflow: hidden
@@ -42,8 +52,9 @@ body.modal-open
         background-color: #08A6E4
         color: #fff
         padding: 10px
-        border-radius: 8px 8px 0 0
+        border-radius: 8px
         text-align: center
+        box-shadow: 0 4px 8px rgba($secondary-color, 0.5)
 
     &-body
         padding: 20px

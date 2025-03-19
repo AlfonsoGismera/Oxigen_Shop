@@ -198,6 +198,18 @@ body.top-position .return-top {
     margin-bottom: 0;
   }
 }
+.modal_submit {
+  background-color: #08A6E4;
+  color: #fff;
+  border: none;
+  padding: 3px;
+  font-size: 0.7em;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(6.2711864407, 130.1271186441, 178.7288135593, 0.5);
+  transition: background-color 0.3s;
+}
+
 body.modal-open {
   overflow: hidden;
   position: fixed;
@@ -237,8 +249,9 @@ body.modal-open {
   background-color: #08A6E4;
   color: #fff;
   padding: 10px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(6.2711864407, 130.1271186441, 178.7288135593, 0.5);
 }
 .modal-body {
   padding: 20px;
@@ -375,20 +388,30 @@ body.modal-open {
 /* 3. HERO */
 .hero {
   text-align: center;
-  padding: 20px;
+  padding: 3em;
 }
 .hero__title {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin: 10px;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 57px;
+  text-align: center;
 }
 .hero__subtitle {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
 }
 .hero__cta {
   background-color: #08A6E4;
   color: #fff;
   border: none;
+  margin-top: 15px;
   padding: 15px 106px;
   cursor: pointer;
   border-radius: 50px;
@@ -401,7 +424,6 @@ body.modal-open {
 .hero__image {
   width: 100%;
   margin-top: 20px;
-  /* Ajuste para Sobremesa */
 }
 @media only screen and (min-width: 1000px) {
   .hero__image .hero {
@@ -504,7 +526,7 @@ body.modal-open {
   align-items: center;
   margin-top: 3em;
   border-radius: 8px;
-  padding: 1em;
+  padding: 4em 2em 6em 2em;
   background-color: #FFFFFF;
   border: 1px solid rgb(232, 233, 237);
   align-items: stretch;
@@ -517,6 +539,7 @@ body.modal-open {
   font-weight: 400;
   font-size: 36px;
   line-height: 42px;
+  margin-top: 10px;
 }
 .cards-section .card .text-content p {
   font-family: "Open Sans", sans-serif;
@@ -524,7 +547,6 @@ body.modal-open {
   font-size: 16px;
   line-height: 22px;
   white-space: pre-line;
-  margin: 1em;
 }
 .cards-section .card .image-content {
   position: relative;
@@ -532,8 +554,8 @@ body.modal-open {
 }
 .cards-section .card .image-content img {
   max-width: 100%;
-  height: auto;
   display: block;
+  height: 280px;
 }
 .cards-section .card-1 {
   margin-top: 5em;
@@ -546,9 +568,9 @@ body.modal-open {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  margin-top: 3em;
   height: 4px;
-  width: 100%;
+  width: 70%;
   background-color: #FB3B64;
 }
 .cards-section .card-1 .image-content {
@@ -557,14 +579,14 @@ body.modal-open {
 .cards-section .card-1 .image-content::before {
   content: "";
   position: absolute;
-  top: -1%;
-  right: 3%;
-  width: 40%;
+  top: -11%;
+  right: 2%;
+  width: 43%;
   height: 70%;
   border-radius: 25px;
   background-color: #FB3B64;
   z-index: -1;
-  transform: rotate(15deg);
+  transform: rotate(50deg);
 }
 .cards-section .card-2 .text-content p {
   position: relative;
@@ -574,17 +596,18 @@ body.modal-open {
   content: "";
   position: absolute;
   height: 4px;
-  width: 100%;
+  width: 70%;
+  margin-top: 3em;
   background-color: #08A6E4;
 }
 .cards-section .card-2 .image-content::after {
   content: "";
   position: absolute;
-  top: 45%;
-  left: 45%;
+  top: 47%;
+  left: 38%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
+  width: 68%;
+  height: 96%;
   background-color: #08A6E4;
   border-radius: 50%;
   z-index: -1;
@@ -618,17 +641,13 @@ body.modal-open {
 .cards-section .cards-row .card-3 {
   margin-right: 1em;
 }
-.cards-section .cards-row .card-3 .text-content p {
-  position: relative;
-  padding-bottom: 10px;
-}
 .cards-section .cards-row .card-3 .text-content p::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
   height: 4px;
-  width: 100%;
+  width: 70%;
+  margin-top: 2em;
   background-color: #55DFB4;
 }
 .cards-section .cards-row .card-3, .cards-section .cards-row .card-4 {
@@ -654,7 +673,6 @@ body.modal-open {
 }
 .cards-section .cards-row .card-4 .image-content img {
   max-width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
