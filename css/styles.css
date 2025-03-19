@@ -579,7 +579,7 @@ body.modal-open {
 .cards-section .card-1 .image-content::before {
   content: "";
   position: absolute;
-  top: -11%;
+  top: -8%;
   right: 2%;
   width: 43%;
   height: 70%;
