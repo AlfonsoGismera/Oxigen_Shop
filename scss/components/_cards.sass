@@ -101,60 +101,25 @@
         background-color: #08A6E4
         border-radius: 50%
         z-index: -1
-
-  @media (max-width: 768px)
-    flex-direction: column-reverse // Invierte el orden de los elementos
-    align-items: center
-
+  .card-3
+    margin-right: 1em
     .text-content
-      order: 2
-      width: 100%
-      text-align: center
-
-    .image-content
-      order: 1
-      width: 100%
-      text-align: center
-    .card-2
-      position: relative
-
-  .image-content
-    position: relative
-    z-index: 1
-
-  // Fila que contiene Card 3 y Card 4
-  .cards-row
+      p
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          height: 4px
+          width: 70%
+          margin-top: 2em
+          background-color: $green
+  .card-4
+    padding: 0
     display: flex
+    background-color: rgba(85, 223, 180, 1)
 
-    // Card 3: Solo texto con línea
-    .card-3
-      margin-right: 1em
-      .text-content
-        p
-          &::after
-            content: ""
-            position: absolute
-            left: 0
-            height: 4px
-            width: 70%
-            margin-top: 2em
-            background-color: $green
-
-    // Estilos para que ambas cards (3 y 4) se muestren en una fila
-    .card-3, .card-4
+    & .text-content
       flex: 1
-      display: flex
-      align-items: center
-      justify-content: space-between
-      margin-bottom: 5em
-
-    .card-4
-      padding: 0
-      display: flex
-      background-color: rgba(85, 223, 180, 1)
-
-      & .text-content
-        flex: 1
 
       & .image-content
         flex: 1
@@ -165,35 +130,66 @@
       & .image-content img
         max-width: 100%
         object-fit: cover
+  .cards-row
+    display: flex
 
-//  Responsividad para tablets/móviles
+    // Estilos para que ambas cards (3 y 4) se muestren en una fila
+    .card-3, .card-4
+      flex: 1
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 5em
+
 @media (max-width: 768px)
-  .cards-section .cards-row
-    flex-direction: column
-    margin-bottom: 2em
-    margin-top: 2em
+  .cards-section
+    width: 90%
 
   .cards-section .card
     flex-direction: column
     text-align: center
 
-  .cards-section .image-content
+  .text-content,
+  .image-content
+    width: 100%
     text-align: center
+
+  .text-content
+    order: 2
+
+  .image-content
+    order: 1
+    position: relative
+    z-index: 1
+
+  .cards-section .card-2
+    position: relative
+
+  // Ajustes para la imagen de Card 1
+  .cards-section .card-1 .image-content::before
+    top: -5%
+    right: 5%
+    width: 60%
+    height: 70%
+
+  // Fila que contiene Card 3 y Card 4
+  .cards-section .cards-row
+    flex-direction: column
+    margin: 2em 0
 
   .cards-section .cards-row .card-3,
   .cards-section .cards-row .card-4
-    flex-direction: column
     margin: 0
-  .cards-section .card-4 .image-content,
-  .cards-section .card-1 .image-content,
-  .cards-section .card-2 .image-content
-    text-align: center
 
+  // Ocultar líneas decorativas en móvil
   .cards-section .card-1 .text-content p::after,
   .cards-section .card-2 .text-content p::after,
   .cards-section .card-3 .text-content p::after
     display: none
+
+  // Eliminar bordes en Cards 3 y 4 para mejor integración visual
   .cards-section .card-3
     border-bottom: none
+
   .cards-section .card-4
     border-top: none

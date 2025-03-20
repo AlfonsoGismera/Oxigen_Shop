@@ -1,5 +1,5 @@
 export default async function initPopUp() {
-  const saveSubscriptionState = false;
+  const saveSubscriptionState = true;
 
   const modal = document.getElementById("newsletter-modal");
   const closeButton = modal.querySelector(".close-button");
