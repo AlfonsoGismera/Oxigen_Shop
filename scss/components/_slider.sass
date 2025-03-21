@@ -1,10 +1,13 @@
+@use '../base/variables' as vars
+@use '../base/reset' as reset
+    
 .slider-container
     position: relative
     width: 74%
     height: 400px
     margin: 1em auto
     overflow: hidden
-    border: 2px solid #08A6E4
+    border: 2px solid vars.$primary-color
     border-radius: 8px
 
 .slider
@@ -20,7 +23,7 @@
         display: block
         flex-shrink: 0
 
-    &-controls 
+    &-controls
         position: absolute
         top: 50%
         width: 100%
@@ -55,9 +58,8 @@
         transition: background 0.3s
 
     span.active
-        background-color: #08A6E4
+        background-color: vars.$primary-color
 
-// Media query para móviles
 @media only screen and (max-width: 768px)
     .slider-container
         width: 90%

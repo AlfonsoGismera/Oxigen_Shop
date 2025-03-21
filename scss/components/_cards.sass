@@ -1,18 +1,16 @@
 // Base de la pagina
-@use '../base/variables' as *
-@use '../base/reset' as *
+@use '../base/variables' as vars
+@use '../base/reset' as reset
 
 /* 3.6. CARDS */
 .cards-section
   width: 80%
-  margin: 0 auto
+  margin: 2em auto 0 auto
   padding: 20px 0
-  margin-top: 2em
 
   .card
     display: flex
     justify-content: space-between
-    align-items: center
     margin-top: 3em
     border-radius: 8px
     padding: 4em 2em 6em 2em
@@ -31,7 +29,7 @@
         margin-top: 10px
 
       p
-        font-family: $font-open-sans
+        font-family: vars.$font-open-sans
         font-weight: 400
         font-size: 16px
         line-height: 22px
@@ -59,7 +57,7 @@
           margin-top: 3em
           height: 4px
           width: 70%
-          background-color: $red
+          background-color: vars.$red
 
     .image-content
       text-align: right
@@ -87,7 +85,7 @@
           height: 4px
           width: 70%
           margin-top: 3em
-          background-color: $primary-color
+          background-color: vars.$primary-color
 
     .image-content
       &::after // Círculo
@@ -112,7 +110,7 @@
           height: 4px
           width: 70%
           margin-top: 2em
-          background-color: $green
+          background-color: vars.$green
   .card-4
     padding: 0
     display: flex

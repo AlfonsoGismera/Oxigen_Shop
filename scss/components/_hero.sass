@@ -1,13 +1,11 @@
 // Base de la pagina
-@use '../base/variables' as *
-@use '../base/reset' as *
+@use '../base/variables' as vars
+@use '../base/reset' as reset
 
 /* 3. HERO */
 .hero
   text-align: center
-  padding: 3em
   &__title
-    font-size: 24px
     margin: 10px
     font-weight: 400
     font-size: 49px
@@ -17,29 +15,30 @@
   &__subtitle
     font-size: 16px
     margin: 15px
-    font-family: $font-open-sans
+    font-family: vars.$font-open-sans
     font-weight: 400
-    font-size: 16px
     line-height: 22px
     text-align: center
 
   &__cta
-    background-color: $primary-color
+    background-color: vars.$primary-color
     color: #fff
     border: none
     margin-top: 15px
     padding: 15px 106px
     cursor: pointer
     border-radius: 50px
-    box-shadow: 0 4px 5px rgba($secondary-color, 0.5) 
+    box-shadow: 0 4px 5px rgba(vars.$secondary-color, 0.5)
     transition: background-color 0.3s
 
     &:hover
-      background-color: $secondary-color 
+      background-color: vars.$secondary-color
 
   &__image
     width: 100%
     margin-top: 20px
-    @media only screen and (min-width: 1000px)
-      .hero
-        flex-direction: row
+
+@media (max-width: 480px)
+  .cta
+    padding: 10px 40px
+    font-size: 1em

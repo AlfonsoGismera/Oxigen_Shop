@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .progress-bar {
   position: fixed;
   top: 0;
@@ -58,13 +64,6 @@ body.top-position .return-top {
     display: none;
   }
 }
-/* 1. RESET Y REGLAS BÁSICAS */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* 2. HEADER */
 .header {
   background-color: #fff;
@@ -73,7 +72,6 @@ body.top-position .return-top {
   position: relative;
   display: flex;
   /* Botón hamburguesa */
-  /* Menú de navegación */
 }
 .header__logo h3 {
   color: #08A6E4;
@@ -135,6 +133,7 @@ body.top-position .return-top {
 }
 .header__nav .header__menu-item a:hover {
   color: #000000;
+  border-bottom: 2px solid #08A6E4;
 }
 
 /* Media Query para Mobile */
@@ -210,7 +209,7 @@ body.top-position .return-top {
 }
 
 body.modal-open {
-  overflow: hidden;
+  overflow-y: hidden;
   position: fixed;
   width: 100%;
 }
@@ -387,10 +386,8 @@ body.modal-open {
 /* 3. HERO */
 .hero {
   text-align: center;
-  padding: 3em;
 }
 .hero__title {
-  font-size: 24px;
   margin: 10px;
   font-weight: 400;
   font-size: 49px;
@@ -402,7 +399,6 @@ body.modal-open {
   margin: 15px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 22px;
   text-align: center;
 }
@@ -424,12 +420,13 @@ body.modal-open {
   width: 100%;
   margin-top: 20px;
 }
-@media only screen and (min-width: 1000px) {
-  .hero__image .hero {
-    flex-direction: row;
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 10px 40px;
+    font-size: 1em;
   }
 }
-
 /* 3.5. SALES */
 .sales {
   text-align: center;
@@ -515,14 +512,12 @@ body.modal-open {
 /* 3.6. CARDS */
 .cards-section {
   width: 80%;
-  margin: 0 auto;
+  margin: 2em auto 0 auto;
   padding: 20px 0;
-  margin-top: 2em;
 }
 .cards-section .card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 3em;
   border-radius: 8px;
   padding: 4em 2em 6em 2em;
@@ -702,13 +697,11 @@ body.modal-open {
     border-top: none;
   }
 }
-/* Form Section*/
 .form-section {
   display: block;
   padding: 20px 10px;
 }
 
-/* Form Container */
 .form-container {
   background-color: #fff;
   padding: 30px;
@@ -719,7 +712,6 @@ body.modal-open {
   line-height: 22px;
 }
 
-/* Form Left  */
 .form-left {
   padding-left: 30px;
 }
@@ -764,7 +756,7 @@ body.modal-open {
 .contact-form label {
   display: block;
   font-size: 11px;
-  line-height: 14.98px;
+  line-height: 15px;
   letter-spacing: 3.28px;
 }
 
@@ -782,7 +774,6 @@ body.modal-open {
   font-weight: 400;
   font-size: 12px;
   line-height: 16.34px;
-  flex-wrap: wrap;
 }
 
 .checkbox-wrapper {
@@ -794,7 +785,6 @@ body.modal-open {
   width: 24px;
   height: 24px;
   margin-right: 1em;
-  flex-wrap: wrap;
 }
 
 /* Botón de enviar */
@@ -816,7 +806,6 @@ body.modal-open {
   background-color: rgb(6.2711864407, 130.1271186441, 178.7288135593);
 }
 
-/* Contenedor y botón de enviar */
 .save-container {
   display: flex;
   justify-content: space-between;
@@ -850,16 +839,6 @@ body.modal-open {
 @media (max-width: 768px) {
   .form-container {
     padding: 15px;
-  }
-  .conversion-box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .unit-container,
-  .input-group {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -916,9 +895,8 @@ body.modal-open {
 
 .prices__item {
   position: relative;
-  padding-bottom: 60px;
+  padding: 20px 20px 60px 20px;
   background: white;
-  padding: 20px;
   margin-top: 1em;
   margin-right: 2em;
   border-radius: 18px;
@@ -999,8 +977,7 @@ body.modal-open {
   margin: 1.8em;
   justify-content: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 19.07px;
+  line-height: 19px;
 }
 
 .check,
@@ -1010,7 +987,6 @@ body.modal-open {
   justify-content: center;
   width: 18px;
   height: 18px;
-  top: 1px;
   border-radius: 4px;
   margin-right: 0.5em;
 }
@@ -1062,7 +1038,7 @@ body.modal-open {
 .footer {
   background-color: #f5f5f5;
   padding: 20px 50px;
-  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -5px 40px 0 rgba(0, 0, 0, 0.2);
 }
 .footer__content {
   display: flex;

@@ -1,6 +1,6 @@
 // Base de la pagina
-@use '../base/variables' as *
-@use '../base/reset' as *
+@use '../base/variables' as vars
+@use '../base/reset' as reset
 
 /* 5. PRICES */
  // selector de monedas cambios nuevos
@@ -9,7 +9,7 @@
   justify-content: center
   margin-bottom: 10px
   text-align: left
-  font-family: $font-open-sans
+  font-family: vars.$font-open-sans
 
   & label
     margin-left: 5px
@@ -22,7 +22,7 @@
 .prices
   text-align: center
   padding: 40px 20px
-  font-family: $font-open-sans
+  font-family: vars.$font-open-sans
   margin-top: 2em
 
 .prices__title
@@ -39,9 +39,8 @@
 
 .prices__item
   position: relative
-  padding-bottom: 60px
+  padding: 20px 20px 60px 20px
   background: white
-  padding: 20px
   margin-top: 1em
   margin-right: 2em
   border-radius: 18px
@@ -51,19 +50,22 @@
   transition: box-shadow 0.3s ease
 // Tiers
 .basic
-  border: 1px solid $red
+  border: 1px solid vars.$red
+
   &:hover
-    box-shadow: 5px 5px 20px -5px $red
+    box-shadow: 5px 5px 20px -5px vars.$red
 
 .professional
-  border: 1px solid $primary-color
+  border: 1px solid vars.$primary-color
+
   &:hover
-    box-shadow: 5px 5px 20px -5px$primary-color
+    box-shadow: 5px 5px 20px -5px vars.$primary-color
 
 .premium
-  border: 1px solid $green
+  border: 1px solid vars.$green
+
   &:hover
-    box-shadow: 5px 5px 20px -5px $green
+    box-shadow: 5px 5px 20px -5px vars.$green
 
 .prices__item-title
   margin-bottom: 10px
@@ -80,19 +82,19 @@
   position: absolute
   left: 50%
   transform: translateX(-50%)
-  font-family: $font-raleway
+  font-family: vars.$font-raleway
   font-weight: 700
   font-size: 12px
   line-height: 14.09px
 
 .basic .prices__item-price
-  color: $red
+  color: vars.$red
 
 .professional .prices__item-price
-  color: $primary-color
+  color: vars.$primary-color
 
 .premium .prices__item-price
-  color: $green
+  color: vars.$green
 
 .prices__features
   list-style: none
@@ -107,10 +109,8 @@
   margin: 1.8em
   justify-content: center
   font-weight: 400
-  font-size: 14px
-  line-height: 19.07px
+  line-height: 19px
 
-// Colores de los check
 .check,
 .cross
   display: inline-flex
@@ -118,23 +118,22 @@
   justify-content: center
   width: 18px
   height: 18px
-  top: 1px
   border-radius: 4px
   margin-right: 0.5em
 
 .check
-  border: 2px solid $green
-  color: $green
+  border: 2px solid vars.$green
+  color: vars.$green
 
 .cross
-  color: $red
-  border: 2px solid $red
+  color: vars.$red
+  border: 2px solid vars.$red
 
 .prices__button
   position: absolute
   bottom: 0
   left: 50%
-  transform: translateX(-50%) translateY(50%) // Lo hace sobresalir
+  transform: translateX(-50%) translateY(50%)
   display: inline-block
   padding: 15px 50px
   border-radius: 33px
@@ -143,17 +142,16 @@
   cursor: pointer
 
 .basic .prices__button
-  background: $red
+  background: vars.$red
   color: white
 
 .professional .prices__button
-  background: $primary-color
+  background: vars.$primary-color
   color: white
 
 .premium .prices__button
-  background: $green
+  background: vars.$green
   color: white
-// Responsive
 @media (max-width: 768px)
   .prices__list
     flex-direction: column

@@ -1,6 +1,6 @@
 // Base de la pagina
-@use '../base/variables' as *
-@use '../base/reset' as *
+@use '../base/variables' as vars
+@use '../base/reset' as reset
 
 /* 2. HEADER */
 .header
@@ -11,8 +11,8 @@
   display: flex
   &__logo
     h3
-      color: $primary-color
-      font-family: $font-raleway
+      color: vars.$primary-color
+      font-family: vars.$font-raleway
       font-weight: 300
       font-size: 32px
       line-height: 37px
@@ -30,7 +30,6 @@
     height: 30px
     z-index: 999
 
-  /* Menú de navegación */
   &__nav
     position: absolute
     top: 0
@@ -61,7 +60,7 @@
         a
           text-decoration: none
           color: rgba(165, 165, 165, 1)
-          font-family: $font-open-sans
+          font-family: vars.$font-open-sans
           font-weight: 700
           font-size: 11px
           line-height: 15px
@@ -71,7 +70,8 @@
           white-space: nowrap; 
 
           &:hover
-            color: $text-color
+            color: vars.$text-color
+            border-bottom: 2px solid vars.$primary-color
 
 
 /* Media Query para Mobile */
