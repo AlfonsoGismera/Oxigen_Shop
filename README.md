@@ -5,7 +5,7 @@ Este proyecto consiste en el diseño y desarrollo de una página web de ventas m
 ## Previsualización
 * GitHub.io: [Echa un vistazo](https://alfonsogismera.github.io/Oxigen_Shop/)
 ### Ordenador
-<p align="center">
+<!-- <p align="center">
   <img src="./img/Ordenador.gif" alt="Animación de la página principal">
 </p>
 
@@ -13,7 +13,7 @@ Este proyecto consiste en el diseño y desarrollo de una página web de ventas m
 ### Móvil
 <p align="center">
   <img src="./img/Movil.gif" alt="Animación de la página principal">
-</p>
+</p> -->
 
 ## Instrucciones de Instalación y Uso
 
