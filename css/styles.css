@@ -911,6 +911,7 @@ body.modal-open {
 }
 .basic:hover {
   box-shadow: 5px 5px 20px -5px #FB3B64;
+  transform: scale(1.1);
 }
 
 .professional {
@@ -918,6 +919,7 @@ body.modal-open {
 }
 .professional:hover {
   box-shadow: 5px 5px 20px -5px #08A6E4;
+  transform: scale(1.1);
 }
 
 .premium {
@@ -925,6 +927,7 @@ body.modal-open {
 }
 .premium:hover {
   box-shadow: 5px 5px 20px -5px #55DFB4;
+  transform: scale(1.1);
 }
 
 .prices__item-title {
