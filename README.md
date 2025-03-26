@@ -9,7 +9,6 @@ Este proyecto consiste en el diseño y desarrollo de una página web de ventas m
   <img src="./img/Ordenador.gif" alt="Animación de la página principal">
 </p>
 
-
 ### Móvil
 <p align="center">
   <img src="./img/Movil.gif" alt="Animación de la página principal">
