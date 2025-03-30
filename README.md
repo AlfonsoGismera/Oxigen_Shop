@@ -61,7 +61,7 @@ Este archivo te permite especificar cómo Git debe manejar los finales de línea
 
 ## ✍️ Autor
 
-Alfonso Gismera Perea
+Alfonso Francisco Gismera Perea
 
 ## Licencia
 
