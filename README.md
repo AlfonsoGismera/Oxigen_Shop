@@ -1,69 +1,145 @@
 Oxigen Shop - Proyecto Training
+===============================
 
-Este proyecto consiste en el diseño y desarrollo de una página web de ventas moderna y responsiva, utilizando HTML, Sass y CSS.
+**Oxigen Shop** es una tienda online de demostración desarrollada como parte de un proyecto de entrenamiento. Su objetivo es mostrar un diseño moderno, accesible y totalmente responsive, implementado con **HTML5**, **Sass** (SCSS) y **CSS3**.
 
-## Previsualización
-* GitHub.io: [Echa un vistazo](https://alfonsogismera.github.io/Oxigen_Shop/)
-### Ordenador
+🔗 **Previsualización**
+- GitHub Pages: https://alfonsogismera.github.io/Oxigen_Shop/
 
-<!-- <p align="center">
-  <img src="./img/Ordenador.gif" alt="Animación de la página principal">
+Visualiza cómo se adapta la interfaz en distintos dispositivos:
+
+<p align="center">
+  <img src="./img/Ordenador.gif" alt="Vista ordenador">
 </p>
 
-### Móvil
 <p align="center">
-  <img src="./img/Movil.gif" alt="Animación de la página principal">
-</p> -->
+  <img src="./img/Movil.gif" alt="Vista móvil">
+</p>
 
-## Instrucciones de Instalación y Uso
+---
 
-1. Clona el repositorio: `git clone https://github.com/theodelrieu?tab=repositories`
-2. Abre el archivo `index.html` en tu navegador.
-3. Para compilar los archivos Sass, ejecuta el siguiente comando en la terminal: `sass --watch scss:css`
+## 🚀 Tecnologías utilizadas
 
-## Características Destacadas
+- **HTML5**
+- **Sass (SCSS)**
+- **CSS3**
+- **BEM (Block, Element, Modifier)**
 
-* Diseño responsivo que se adapta a diferentes dispositivos.
-* Estructura clara y fácil de navegar.
-* Estilos personalizados con Sass para una mayor flexibilidad.
+---
 
-## Extras - Manejo de Finales de Línea ⚠️
+## 🏗️ Estructura del proyecto
 
-Estoy usando Windows, que utiliza finales de línea CRLF. El archivo `css/styles.css` tiene finales de línea LF, típicos de sistemas Unix. Git te avisará para reemplazar los LF por CRLF para mantener la consistencia en tu sistema y viceversa.
+\`\`\`bash
+Oxigen_Shop/
+├── img/                  # Recursos gráficos (GIFs, iconos...)
+├── scss/                 # Archivos fuente de Sass
+│   ├── base/             # Variables, mixins y resets
+│   ├── components/       # Componentes reutilizables
+│   ├── layout/           # Grid y diseño global
+│   ├── pages/            # Estilos específicos de páginas
+│   └── main.scss         # Archivo principal de importación
+├── css/                  # CSS compilado (output)
+│   └── styles.css
+└── index.html            # Página principal
+\`\`\`
 
-**Importancia:** La consistencia en los finales de línea es importante para evitar problemas de ejecución y facilitar la comparación y fusión de código.
+---
 
-**Solución:** Se recomienda configurar Git para manejar los finales de línea correctamente. Puedes usar un archivo `.gitattributes` en la raíz de tu repositorio con el siguiente contenido:
+## ⚙️ Instalación y ejecución
 
-```
-* text=auto
-*.css text eol=lf
-```
+1. Clona el repositorio:
+   \`\`\`bash
+   git clone https://github.com/AlfonsoGismera/Oxigen_Shop.git
+   \`\`\`
+2. Accede a la carpeta del proyecto:
+   \`\`\`bash
+   cd Oxigen_Shop
+   \`\`\`
+3. Abre \`index.html\` en tu navegador o instala un servidor local:
+   \`\`\`bash
+   live-server
+   \`\`\`
+4. Para compilar y ver los cambios de Sass en tiempo real:
+   \`\`\`bash
+   sass --watch scss:css
+   \`\`\`
 
-Para aplicar esta configuración, ejecuta:
-```bash
-git config --global core.autocrlf input
-```
+---
 
-Este archivo te permite especificar cómo Git debe manejar los finales de línea para archivos o tipos de archivos específicos, dándote más control y evitando cambios inesperados.
+## ✨ Características principales
 
-## Posibles Mejoras
+- Diseño **responsive** adaptado a móviles, tablets y escritorio.
+- Código modular y semántico.
+- Uso de **variables** y **mixins** en Sass.
+- Compatibilidad con navegadores modernos.
 
-* **Implementación de JavaScript⚡:** Añadir interactividad con animaciones, validaciones de formularios y efectos dinámicos.
-* **Integración con una Base de Datos:** Gestionar productos, usuarios y pedidos de forma eficiente.
-* **Optimización SEO:** Mejorar el posicionamiento en buscadores con metaetiquetas, contenido relevante y estructura semántica.
-* **Añadir Test Unitarios✅:** Para asegurar la calidad del código.
-* **Despliegue Continuo ☁️:** Para poder actualizar la página de una forma más automática.
+---
 
-## Información de Contacto
+## 📐 Metodología BEM
 
-* GitHub: [Echa un vistazo](https://github.com/AlfonsoGismera)
+Para mantener un CSS escalable y fácil de mantener, se ha aplicado la convención **BEM**:
 
-## ✍️ Autor
+1. **Block** (Bloque): componente independiente con significado por sí mismo.
+   \`\`\`scss
+   .card { /* bloque */ }
+   \`\`\`
+2. **Element** (Elemento): parte constituyente de un bloque, separado por \`__\`.
+   \`\`\`scss
+   .card__title { /* elemento de card */ }
+   \`\`\`
+3. **Modifier** (Modificador): variación de bloque o elemento, separado por \`--\`.
+   \`\`\`scss
+   .card--highlight { /* bloque alternativo */ }
+   .card__title--small { /* elemento en variante */ }
+   \`\`\`
 
-Alfonso Francisco Gismera Perea
+**Ventajas de BEM:**
+- Claridad en la relación entre HTML y CSS.
+- Evita colisiones globales de nombres.
+- Facilita la lectura y mantenimiento del código.
 
-## Licencia
+---
 
-Este proyecto no tiene licencia, se ha usado para reforzar conocimientos.
+## ⚠️ Manejo de finales de línea (EOL)
 
+Este proyecto utiliza finales de línea **LF** para compatibilidad Unix/macOS. Si trabajas en Windows (**CRLF**), Git puede alertarte de diferencias. Para unificar:
+
+1. Añade un archivo \`.gitattributes\` en la raíz:
+   \`\`\`gitattributes
+   * text=auto
+   *.css text eol=lf
+   \`\`\`
+2. Configura Git:
+   \`\`\`bash
+   git config --global core.autocrlf input
+   \`\`\`
+
+Así, evitarás cambios de EOL no deseados y conflictos al fusionar.
+
+---
+
+## 🤝 Contribuciones
+
+¡Se aceptan pull requests! Para contribuir:
+1. Haz un fork del repositorio.
+2. Crea una rama (\`git checkout -b feature/nueva-caracteristica\`).
+3. Realiza tus cambios y haz commit (\`git commit -m 'Añadir nueva característica'\`).
+4. Envía tu branch a tu fork y crea un Pull Request.
+
+---
+
+## 📬 Contacto
+
+- GitHub: [AlfonsoGismera](https://github.com/AlfonsoGismera)
+
+---
+
+## 🖋️ Autor
+
+**Alfonso Francisco Gismera Perea**
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de carácter educativo y no cuenta con una licencia específica.
