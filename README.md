@@ -47,13 +47,7 @@ git config --global core.autocrlf input
 
 Este archivo te permite especificar cómo Git debe manejar los finales de línea para archivos o tipos de archivos específicos, dándote más control y evitando cambios inesperados.
 
-## Posibles Mejoras
 
-* **Implementación de JavaScript⚡:** Añadir interactividad con animaciones, validaciones de formularios y efectos dinámicos.
-* **Integración con una Base de Datos:** Gestionar productos, usuarios y pedidos de forma eficiente.
-* **Optimización SEO:** Mejorar el posicionamiento en buscadores con metaetiquetas, contenido relevante y estructura semántica.
-* **Añadir Test Unitarios✅:** Para asegurar la calidad del código.
-* **Despliegue Continuo ☁️:** Para poder actualizar la página de una forma más automática.
 
 ## Información de Contacto
 
