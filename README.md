@@ -1,6 +1,6 @@
 # Oxigen Shop - Proyecto Training
 
-**Oxigen Shop** es una tienda online de demostración desarrollada como parte de un proyecto de entrenamiento. Su objetivo es mostrar un diseño moderno, accesible y totalmente responsive, implementado con **HTML5**, **Sass** (SCSS) y **CSS3**.
+**Oxigen Shop** es una tienda online de demostración desarrollada como parte de un proyecto de entrenamiento. Su objetivo es mostrar un diseño moderno, accesible y totalmente responsive, implementado con **HTML5**, **Sass** (SCSS) y **BEM**.
 
 🔗 **Previsualización**
 
